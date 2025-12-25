@@ -72,8 +72,3 @@ coverage/
 *.psd
 *.ai
 *.sketch
-
-# Ignore proyect log file
-PROJECT_LOG.md
-CONTEXT.md
-LANDING-CHAT-CLAUDE-ALLIA.md

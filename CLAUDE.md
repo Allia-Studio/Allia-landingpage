@@ -2,11 +2,65 @@
 
 Este archivo proporciona orientación a Claude Code (claude.ai/code) al trabajar con código en este repositorio.
 
+## Sobre Allia Studio
+
+### Identidad y Propósito
+
+**Allia Studio** es un **Tech Venture Studio** y agencia de desarrollo de software especializada en Inteligencia Artificial. Nuestra misión es cerrar la brecha entre la visión de negocio y la ejecución técnica, actuando como socios tecnológicos estratégicos para fundadores y empresas.
+
+**Propósito Central**: Ayudar a expertos de industria a convertir sus ideas en productos reales. Proveemos el "músculo técnico" que muchos visionarios necesitan pero no tienen.
+
+### Equipo
+
+- **Fernando Choqque**: Computer Science + Visión de Producto
+- **Carlos Flores**: Computer Science + Especialización en IA
+
+### Modelo de Negocio Híbrido
+
+Operamos bajo dos líneas de negocio complementarias:
+
+#### Categoría A: Software a Medida (75-80% de actividad)
+- **Modelo**: Fee-based (pago por proyecto)
+- **Clientes**: Empresas consolidadas con presupuesto
+- **Servicios**: Desarrollo Full-Stack, IA aplicada, automatización de procesos
+- **Objetivo**: Flujo de caja estable y entregas profesionales
+
+#### Categoría B: Venture Partnership (20% de actividad)
+- **Modelo**: Equity-based (socios tecnológicos)
+- **Clientes**: Fundadores visionarios en etapa temprana (early-stage)
+- **Intercambio**: Desarrollo de producto a cambio de participación accionaria (equity bajo esquema de Vesting)
+- **Rol**: Actuamos como CTO y equipo de ingeniería fundador
+- **Objetivo**: Construcción de patrimonio a largo plazo
+
+### Filosofía de Trabajo
+
+**"Ingeniería, no Artesanía"** - Transformamos el desarrollo de software de un servicio artesanal a un proceso de ingeniería estructurado.
+
+**Marco Operativo de 4 Fases**:
+1. Discovery (Descubrimiento)
+2. Diseño
+3. Desarrollo
+4. Lanzamiento
+
+**Diferencial AI-First**: Integramos capacidades de IA (LLMs, Deep Learning) en el núcleo de los productos cuando esto genera diferenciación real.
+
+### Propuesta de Valor
+
+- Arquitecturas escalables (no prototipos que necesitan reescritura)
+- Capacidad técnica robusta (Computer Science + IA)
+- Compromiso a largo plazo en proyectos de equity
+- Agnósticos a industria, especializados en ejecución técnica
+
+---
+
 ## Descripción del Proyecto
 
-Landing page de Allia Studio - Un sitio web estático para una agencia de desarrollo de software. Este es un proyecto puro de HTML/CSS/JavaScript (sin herramientas de compilación ni frameworks) diseñado para desplegarse en GitHub Pages en www.allia.dev.
+Landing page de Allia Studio - Sitio web estático para comunicar nuestros servicios, modelo de negocio y facilitar el contacto con potenciales clientes y socios.
 
-## Arquitectura
+**Tecnología**: HTML/CSS/JavaScript vanilla (sin herramientas de compilación ni frameworks)
+**Despliegue**: GitHub Pages en www.allia.dev
+
+## Arquitectura Técnica
 
 ### Estructura de Archivos
 
@@ -19,7 +73,7 @@ Landing page de Allia Studio - Un sitio web estático para una agencia de desarr
     - `components.css` - Componentes UI reutilizables (botones, tarjetas)
     - `animations.css` - Definiciones de animaciones y transiciones
     - `responsive.css` - Breakpoints responsive mobile-first
-- **js/main.js** - Funcionalidad principal (actualmente solo lógica del menú móvil)
+- **js/main.js** - Funcionalidad principal (lógica del menú móvil)
 - **assets/** - Recursos estáticos (favicons, imágenes)
 
 ### Sistema de Diseño (variables.css)
@@ -91,6 +145,7 @@ Desplegado mediante GitHub Pages. El archivo CNAME apunta a www.allia.dev. Cualq
 - Seguir nomenclatura tipo BEM: `.navbar`, `.navbar-container`, `.navbar-logo`
 - Enfoque mobile-first - estilos base para móvil, media queries para pantallas más grandes
 - Preferir espaciado semántico (`var(--space-4)`) sobre números mágicos
+- **No usar `!important`** - mantener especificidad baja
 
 ### JavaScript
 
@@ -130,3 +185,22 @@ La visibilidad del menú móvil se controla mediante la clase `.active`. El CSS 
 ### Carga de Fuentes
 
 Las fuentes se cargan vía @import en main.css. Las fuentes pesadas (BBH Hegarty) pueden causar FOUT (Flash of Unstyled Text). Este es un comportamiento esperado.
+
+## Comunicación de la Marca
+
+### Mensajes Clave para el Sitio
+
+**Elevator Pitch**: "Allia es el socio tecnológico que transforma la visión de expertos de industria en productos de software escalables e inteligentes, combinando la disciplina de la ingeniería con la innovación del Venture Building."
+
+**Pilares de Comunicación**:
+1. **Músculo Técnico**: Somos el equipo de ingeniería que falta
+2. **Modelo Flexible**: Nos adaptamos a tu flujo de caja y ambición
+3. **Compromiso Real**: No somos una agencia externa, nos volvemos socios
+4. **AI-First**: Construimos sistemas inteligentes, no solo software tradicional
+
+### Tono y Voz
+
+- **Profesional pero accesible**: Evitar jerga excesiva
+- **Orientado a resultados**: Enfocado en impacto de negocio, no solo tecnología
+- **Confianza técnica**: Demostrar expertise sin ser arrogante
+- **Claridad sobre el modelo**: Ser transparentes sobre cómo trabajamos
