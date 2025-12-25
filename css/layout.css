@@ -1,8 +1,7 @@
 /* ============================================
-   LAYOUT - Structure & Navigation
+   LAYOUT
    ============================================ */
 
-/* Container */
 .container {
     width: 100%;
     max-width: var(--container-max);
@@ -10,7 +9,7 @@
     padding-inline: var(--space-6);
 }
 
-/* Navigation Bar */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -29,7 +28,6 @@
     align-items: center;
 }
 
-/* Logo */
 .navbar-logo {
     display: flex;
     align-items: center;
@@ -56,7 +54,6 @@
     line-height: 1;
 }
 
-/* Navigation Menu */
 .navbar-menu {
     display: flex;
     align-items: center;
@@ -91,7 +88,6 @@
     width: 100%;
 }
 
-/* Contact Button */
 .btn-contact {
     display: inline-flex;
     align-items: center;
@@ -113,7 +109,7 @@
     transform: translateY(-1px);
 }
 
-/* Main Content */
+/* Main */
 .main {
     margin-top: var(--navbar-height);
 }

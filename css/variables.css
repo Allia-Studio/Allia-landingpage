@@ -3,96 +3,76 @@
    ============================================ */
 
 :root {
-    /* ===== COLORS ===== */
-    /* Background */
+    /* Colors */
     --bg-primary: #121212;
     --bg-secondary: #1e1e1e;
-    --bg-elevated: #252525;
 
-    /* Text */
     --text-primary: #ffffff;
     --text-secondary: #e0e0e0;
-    --text-tertiary: #a0a0a0;
     --text-muted: #666666;
 
-    /* Brand */
     --brand-primary: #ffd43b;
     --brand-primary-dark: #e6bf35;
-    --brand-primary-light: #ffe066;
 
-    /* Borders */
     --border-color: #333333;
     --border-color-light: #2a2a2a;
 
-    /* ===== TYPOGRAPHY ===== */
-    --font-display: "BBH Hegarty", sans-serif;
-    --font-heading: "Changa One", sans-serif;
+    /* Typography */
+    --font-display: "Archivo Black", sans-serif;
+    --font-heading: "Lexend", sans-serif;
     --font-body: "Montserrat", sans-serif;
 
-    /* Font Sizes - Mobile First */
-    --fs-xs: 0.75rem; /* 12px */
-    --fs-sm: 0.875rem; /* 14px */
-    --fs-base: 1rem; /* 16px */
-    --fs-md: 1.125rem; /* 18px */
-    --fs-lg: 1.25rem; /* 20px */
-    --fs-xl: 1.5rem; /* 24px */
-    --fs-2xl: 2rem; /* 32px */
-    --fs-3xl: 2.5rem; /* 40px */
-    --fs-4xl: 3rem; /* 48px */
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 2.5rem;
+    --fs-4xl: 3rem;
 
-    /* Font Weights */
-    --fw-light: 300;
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-semibold: 600;
     --fw-bold: 700;
+    --fw-black: 900;
 
-    /* Line Heights */
     --lh-tight: 1.2;
     --lh-normal: 1.5;
-    --lh-relaxed: 1.75;
 
-    /* ===== SPACING ===== */
-    --space-1: 0.25rem; /* 4px */
-    --space-2: 0.5rem; /* 8px */
-    --space-3: 0.75rem; /* 12px */
-    --space-4: 1rem; /* 16px */
-    --space-5: 1.5rem; /* 24px */
-    --space-6: 2rem; /* 32px */
-    --space-8: 3rem; /* 48px */
-    --space-10: 4rem; /* 64px */
-    --space-12: 6rem; /* 96px */
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-8: 3rem;
+    --space-10: 4rem;
+    --space-12: 6rem;
 
-    /* ===== LAYOUT ===== */
+    /* Layout */
     --container-max: 1400px;
     --navbar-height: 80px;
+    --navbar-height-tablet: 70px;
+    --navbar-height-mobile: 60px;
 
-    /* ===== BORDERS ===== */
+    /* Borders */
     --border-width-thin: 1px;
     --border-width-medium: 2px;
-    --border-width-thick: 3px;
 
-    --radius-sm: 0.25rem; /* 4px */
-    --radius-md: 0.5rem; /* 8px */
-    --radius-lg: 1rem; /* 16px */
-    --radius-xl: 1.5rem; /* 24px */
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
     --radius-full: 9999px;
 
-    /* ===== TRANSITIONS ===== */
+    /* Transitions */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* ===== SHADOWS ===== */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    /* Shadows */
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
 
-    /* ===== Z-INDEX ===== */
-    --z-base: 1;
-    --z-dropdown: 100;
-    --z-sticky: 500;
+    /* Z-Index */
     --z-fixed: 1000;
-    --z-modal: 2000;
-    --z-tooltip: 3000;
 }

@@ -1,8 +1,9 @@
 /* ============================================
-   MAIN.JS - Core Functionality
+   MAIN.JS
    ============================================ */
 
-// Menú móvil hamburguesa
+const TABLET_BREAKPOINT = 768;
+
 const initMobileMenu = () => {
     const toggle = document.querySelector(".navbar-toggle");
     const menu = document.querySelector(".navbar-menu");
@@ -10,47 +11,37 @@ const initMobileMenu = () => {
 
     if (!toggle || !menu) return;
 
-    // Toggle menú al hacer clic en hamburguesa
+    const closeMenu = () => {
+        toggle.classList.remove("active");
+        menu.classList.remove("active");
+        document.body.style.overflow = "";
+    };
+
     toggle.addEventListener("click", () => {
         toggle.classList.toggle("active");
         menu.classList.toggle("active");
-
-        // Prevenir scroll del body cuando menú está abierto
         document.body.style.overflow = menu.classList.contains("active")
             ? "hidden"
             : "";
     });
 
-    // Cerrar menú al hacer clic en un enlace
     menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            toggle.classList.remove("active");
-            menu.classList.remove("active");
-            document.body.style.overflow = "";
-        });
+        link.addEventListener("click", closeMenu);
     });
 
-    // Cerrar menú al hacer clic fuera
     document.addEventListener("click", (e) => {
         if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-            toggle.classList.remove("active");
-            menu.classList.remove("active");
-            document.body.style.overflow = "";
+            closeMenu();
         }
     });
 
-    // Cerrar menú al cambiar tamaño de ventana (si se vuelve a desktop)
     window.addEventListener("resize", () => {
-        if (window.innerWidth > 768) {
-            toggle.classList.remove("active");
-            menu.classList.remove("active");
-            document.body.style.overflow = "";
+        if (window.innerWidth > TABLET_BREAKPOINT) {
+            closeMenu();
         }
     });
 };
 
-// Inicializar cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
-    console.log("Allia Studio - Website Loaded");
 });

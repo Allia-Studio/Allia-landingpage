@@ -1,14 +1,10 @@
 /* ============================================
-   RESPONSIVE - Mobile & Tablet Adaptations
+   RESPONSIVE
    ============================================ */
 
-/* ============================================
-   MOBILE MENU TOGGLE (Hamburger)
-   ============================================ */
-
-/* Hamburger button - hidden by default on desktop */
+/* Mobile Menu Toggle */
 .navbar-toggle {
-    display: none; /* Hidden on desktop */
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -21,7 +17,6 @@
     z-index: calc(var(--z-fixed) + 1);
 }
 
-/* The 3 lines of the hamburger */
 .navbar-toggle-line {
     width: 24px;
     height: 2px;
@@ -35,7 +30,6 @@
     margin-bottom: 6px;
 }
 
-/* Animation when menu is open (hamburger → X) */
 .navbar-toggle.active .navbar-toggle-line:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -49,21 +43,42 @@
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ============================================
-   MEDIA QUERIES
-   ============================================ */
-
 /* Tablet and mobile (≤768px) */
 @media (max-width: 768px) {
-    /* Show hamburger button */
+    /* Hero Section - Single Column */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-title {
+        text-align: center;
+    }
+
+    .hero-description {
+        max-width: 600px;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
     .navbar-toggle {
         display: flex;
     }
 
-    /* Convert menu to mobile dropdown */
     .navbar-menu {
         position: fixed;
-        top: var(--navbar-height);
+        top: var(--navbar-height-tablet);
         left: 0;
         right: 0;
         flex-direction: column;
@@ -72,22 +87,20 @@
         background-color: var(--bg-primary);
         border-bottom: var(--border-width-thin) solid var(--border-color-light);
         padding: var(--space-6);
-        transform: translateY(-100%); /* Hidden above */
+        transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all var(--transition-base);
-        max-height: calc(100vh - var(--navbar-height));
+        max-height: calc(100vh - var(--navbar-height-tablet));
         overflow-y: auto;
     }
 
-    /* Show menu when active */
     .navbar-menu.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
 
-    /* Mobile menu items */
     .navbar-menu li {
         border-bottom: var(--border-width-thin) solid var(--border-color-light);
     }
@@ -96,19 +109,16 @@
         border-bottom: none;
     }
 
-    /* Links on mobile - full block */
     .navbar-link {
         display: block;
         padding: var(--space-5) var(--space-4);
         font-size: var(--fs-md);
     }
 
-    /* Hide underline effect on mobile */
     .navbar-link::after {
         display: none;
     }
 
-    /* Contact button on mobile - full width */
     .btn-contact {
         width: 100%;
         margin-top: var(--space-4);
@@ -116,30 +126,24 @@
         font-size: var(--fs-md);
     }
 
-    /* Adjust container padding */
     .container {
         padding-inline: var(--space-4);
     }
 
-    /* Reduce navbar height on mobile */
-    .navbar {
-        height: 70px;
-    }
-
+    .navbar,
     .navbar-container {
-        height: 70px;
+        height: var(--navbar-height-tablet);
     }
 
     .main {
-        margin-top: 70px;
+        margin-top: var(--navbar-height-tablet);
     }
 
     .section {
-        min-height: calc(100vh - 70px);
+        min-height: calc(100vh - var(--navbar-height-tablet));
         padding-block: var(--space-10);
     }
 
-    /* Smaller logo */
     .navbar-logo {
         height: 40px;
     }
@@ -155,20 +159,17 @@
         padding-inline: var(--space-3);
     }
 
-    .navbar {
-        height: 60px;
-    }
-
+    .navbar,
     .navbar-container {
-        height: 60px;
+        height: var(--navbar-height-mobile);
     }
 
     .main {
-        margin-top: 60px;
+        margin-top: var(--navbar-height-mobile);
     }
 
     .section {
-        min-height: calc(100vh - 60px);
+        min-height: calc(100vh - var(--navbar-height-mobile));
         padding-block: var(--space-8);
     }
 

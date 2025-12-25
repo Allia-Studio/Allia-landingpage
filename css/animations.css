@@ -1,8 +1,7 @@
 /* ============================================
-   ANIMATIONS - Keyframes & Utilities
+   ANIMATIONS
    ============================================ */
 
-/* Fade Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -21,15 +20,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Animation Utilities */
-.animate-fade-in {
-    animation: fadeIn var(--transition-slow) ease-out;
-}
-
-.animate-fade-in-up {
-    animation: fadeInUp var(--transition-slow) ease-out;
 }
 
 /* Reduced Motion Support */

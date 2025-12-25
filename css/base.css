@@ -1,8 +1,7 @@
 /* ============================================
-   BASE - Reset & Base Styles
+   BASE
    ============================================ */
 
-/* Modern CSS Reset */
 *,
 *::before,
 *::after {
@@ -102,13 +101,11 @@ button {
     padding: 0;
 }
 
-/* Focus Styles */
 :focus-visible {
     outline: 2px solid var(--brand-primary);
     outline-offset: 3px;
 }
 
-/* Selection */
 ::selection {
     background-color: var(--brand-primary);
     color: var(--bg-primary);
