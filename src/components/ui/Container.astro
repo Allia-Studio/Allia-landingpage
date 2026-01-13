@@ -1,15 +1,14 @@
 ---
-interface Props {
-  class?: string;
-  as?: 'div' | 'section' | 'article' | 'main';
-}
+import type { ContainerProps } from '../../lib/types';
+
+interface Props extends ContainerProps {}
 
 const {
   class: className,
   as: Tag = 'div'
 } = Astro.props;
 
-const classes = `w-full max-w-[1800px] mx-auto ${className || ''}`.trim();
+const classes = `w-full max-w-[var(--container-max-width)] mx-auto ${className || ''}`.trim();
 ---
 
 <Tag class={classes}>

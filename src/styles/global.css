@@ -7,20 +7,31 @@
   /* Colors */
   --color-bg: #272822;
   --color-bg-dark: #1e1f1a;
-  --color-surface: #1a1a1a; /* Reserved for cards/sections */
+  --color-surface: #1a1a1a;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-gray: #a0a0a0;
+  --color-gray: #b8b8b8;
   --color-accent: #f18661;
 
   /* Font Families */
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Archivo Black', system-ui, sans-serif;
 
-  /* Spacing */
-  --spacing-nav: 80px;
+  /* Container */
+  --container-max-width: 1800px;
+
+  /* Spacing - General */
   --spacing-container: 48px;
   --spacing-container-mobile: 24px;
+
+  /* Spacing - Navbar */
+  --spacing-nav-height: 80px;
+  --spacing-nav-top: 36px;
+  --spacing-nav-gap: 64px;
+
+  /* Spacing - Hero */
+  --spacing-hero-title-bottom: 40px;
+  --spacing-hero-subtitle-bottom: 48px;
 
   /* Z-index */
   --z-navbar: 1000;
@@ -29,6 +40,7 @@
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
+  --transition-slow: 0.7s ease;
 }
 
 /* ================================
@@ -56,7 +68,7 @@ body {
 /* Link underline animation */
 .link-underline {
   position: relative;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 
 .link-underline::after {

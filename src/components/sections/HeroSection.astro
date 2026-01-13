@@ -1,0 +1,175 @@
+---
+import Container from '../ui/Container.astro';
+import Button from '../ui/Button.astro';
+import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
+---
+
+<section class="min-h-screen flex items-center pt-20 px-[var(--spacing-container-mobile)] md:px-[var(--spacing-container)] bg-[--color-bg] relative overflow-hidden">
+  <Container class="relative z-10">
+    <h1 class="font-display text-[clamp(4rem,12vw,8.5rem)] font-normal leading-[1.02] mb-[var(--spacing-hero-title-bottom)] text-white tracking-tight">
+      <!-- Fallback content for no-JS / SEO -->
+      <noscript>
+        <span class="block">{HERO.lines[0].text}</span>
+        <span class="block">{HERO.lines[1].text}</span>
+      </noscript>
+      <!-- Animated content -->
+      <span class="block min-h-[1.1em]" id={ELEMENT_IDS.heroTitleLine1} aria-label={HERO.lines[0].text}></span>
+      <span class="block min-h-[1.1em]" id={ELEMENT_IDS.heroTitleLine2} aria-label={HERO.lines[1].text}></span>
+    </h1>
+
+    <p
+      class="text-[clamp(1.1rem,2vw,1.35rem)] font-normal text-white mb-[var(--spacing-hero-subtitle-bottom)] leading-relaxed opacity-0 transition-all duration-700"
+      id={ELEMENT_IDS.heroSubtitle}
+    >
+      {HERO.subtitle}
+    </p>
+
+    <Button
+      href="#"
+      variant="primary"
+      size="md"
+      class="opacity-0 translate-y-4"
+      id={ELEMENT_IDS.heroCta}
+      data-cal-link={CALCOM.link}
+      data-cal-namespace={CALCOM.namespace}
+      data-cal-config={JSON.stringify(CALCOM.config)}
+    >
+      {HERO.ctaText}
+    </Button>
+  </Container>
+</section>
+
+<script define:vars={{ ANIMATION, HERO, ELEMENT_IDS }}>
+  // Typewriter animation using centralized constants
+  const lines = HERO.lines;
+  const typeSpeed = ANIMATION.typeSpeed;
+  const cursorChar = HERO.cursorChar;
+
+  // Animation cancellation flag for View Transitions
+  let animationAborted = false;
+
+  /**
+   * Creates a cancellable delay promise
+   * @param {number} ms - Milliseconds to wait
+   * @returns {Promise<boolean>} - Resolves to true if completed, false if aborted
+   */
+  function delay(ms) {
+    return new Promise(resolve => {
+      const timeoutId = setTimeout(() => resolve(true), ms);
+      // Check periodically if animation was aborted
+      const checkAbort = setInterval(() => {
+        if (animationAborted) {
+          clearTimeout(timeoutId);
+          clearInterval(checkAbort);
+          resolve(false);
+        }
+      }, 50);
+    });
+  }
+
+  /**
+   * Types text character by character with a blinking cursor
+   * @param {string} elementId - ID of the target element
+   * @param {string} text - Text to type
+   */
+  async function typeText(elementId, text) {
+    const element = document.getElementById(elementId);
+    if (!element) {
+      console.warn(`[HeroSection] Element not found: ${elementId}`);
+      return;
+    }
+
+    element.textContent = cursorChar;
+
+    for (let i = 0; i <= text.length; i++) {
+      if (animationAborted) return;
+      await delay(typeSpeed);
+      if (animationAborted) return;
+      element.textContent = text.slice(0, i) + cursorChar;
+    }
+
+    // Remove cursor after typing
+    if (animationAborted) return;
+    await delay(ANIMATION.cursorRemoveDelay);
+    if (!animationAborted) {
+      element.textContent = text;
+    }
+  }
+
+  /**
+   * Shows static content immediately (fallback for aborted animation)
+   */
+  function showStaticContent() {
+    lines.forEach(line => {
+      const element = document.getElementById(line.element);
+      if (element) element.textContent = line.text;
+    });
+
+    const subtitle = document.getElementById(ELEMENT_IDS.heroSubtitle);
+    const cta = document.getElementById(ELEMENT_IDS.heroCta);
+
+    if (subtitle) {
+      subtitle.classList.remove('opacity-0');
+      subtitle.classList.add('opacity-100');
+    }
+    if (cta) {
+      cta.classList.remove('opacity-0', 'translate-y-4');
+      cta.classList.add('opacity-100', 'translate-y-0');
+    }
+  }
+
+  /**
+   * Runs the typewriter animation sequence
+   */
+  async function runTypewriter() {
+    try {
+      for (const line of lines) {
+        if (animationAborted) return showStaticContent();
+        const completed = await delay(line.delay);
+        if (!completed || animationAborted) return showStaticContent();
+        await typeText(line.element, line.text);
+      }
+
+      if (animationAborted) return showStaticContent();
+
+      // Fade in subtitle and CTA together after typing
+      const subtitle = document.getElementById(ELEMENT_IDS.heroSubtitle);
+      const cta = document.getElementById(ELEMENT_IDS.heroCta);
+
+      await delay(ANIMATION.postTypingDelay);
+
+      // Show both at the same time
+      if (subtitle) {
+        subtitle.classList.remove('opacity-0');
+        subtitle.classList.add('opacity-100');
+      }
+
+      if (cta) {
+        cta.classList.remove('opacity-0', 'translate-y-4');
+        cta.classList.add('opacity-100', 'translate-y-0');
+      }
+    } catch (error) {
+      console.error('[HeroSection] Animation error:', error);
+      showStaticContent();
+    }
+  }
+
+  // Cleanup on View Transitions navigation
+  document.addEventListener('astro:before-swap', () => {
+    animationAborted = true;
+  }, { once: true });
+
+  // Start animation when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runTypewriter);
+  } else {
+    runTypewriter();
+  }
+</script>
+
+<style>
+  /* Animation transition for CTA button appear effect */
+  #hero-cta {
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+  }
+</style>
