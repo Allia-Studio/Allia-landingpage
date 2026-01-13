@@ -1,0 +1,135 @@
+---
+
+---
+
+<section class="min-h-screen flex items-center pt-20 px-6 md:px-12 bg-[--color-bg] relative overflow-hidden">
+
+  <div class="w-full max-w-[1800px] mx-auto relative z-10">
+    <h1 class="font-display text-[clamp(4rem,12vw,8.5rem)] font-normal leading-[1.02] mb-10 text-white tracking-tight">
+      <!-- Fallback content for no-JS / SEO -->
+      <noscript>
+        <span class="block">TU VISIÓN.</span>
+        <span class="block">NUESTRA INGENIERÍA.</span>
+      </noscript>
+      <!-- Animated content -->
+      <span class="block min-h-[1.1em]" id="title-line-1" aria-label="TU VISIÓN."></span>
+      <span class="block min-h-[1.1em]" id="title-line-2" aria-label="NUESTRA INGENIERÍA."></span>
+    </h1>
+
+    <p class="text-[clamp(1.1rem,2vw,1.35rem)] font-normal text-white mb-12 leading-relaxed opacity-0 transition-all duration-700" id="hero-subtitle">
+      Convertimos grandes ideas en productos digitales robustos y escalables.
+      Somos el socio técnico que tu proyecto necesita.
+    </p>
+
+    <a
+      href="#"
+      class="inline-block px-7 py-4 font-display text-xl font-normal uppercase tracking-wide
+             bg-white border-2 border-white rounded-md
+             cursor-pointer opacity-0 translate-y-4 hero-btn"
+      id="hero-cta"
+      data-cal-link="carlos-alonso-flores-panduro-zejpqc/30min"
+      data-cal-namespace="30min"
+      data-cal-config='{"layout":"column_view"}'
+    >
+      AGENDAR REUNIÓN
+    </a>
+  </div>
+</section>
+
+<script>
+  // Typewriter animation configuration
+  const lines = [
+    { element: 'title-line-1', text: 'TU VISIÓN.', delay: 300 },
+    { element: 'title-line-2', text: 'NUESTRA INGENIERÍA.', delay: 100 }
+  ];
+
+  const typeSpeed = 50; // ms per character
+  const cursorChar = '|';
+
+  /**
+   * Types text character by character with a blinking cursor
+   */
+  async function typeText(elementId: string, text: string): Promise<void> {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    element.textContent = cursorChar;
+
+    for (let i = 0; i <= text.length; i++) {
+      await new Promise(resolve => setTimeout(resolve, typeSpeed));
+      element.textContent = text.slice(0, i) + cursorChar;
+    }
+
+    // Remove cursor after typing
+    await new Promise(resolve => setTimeout(resolve, 400));
+    element.textContent = text;
+  }
+
+  /**
+   * Runs the typewriter animation sequence
+   */
+  async function runTypewriter(): Promise<void> {
+    for (const line of lines) {
+      await new Promise(resolve => setTimeout(resolve, line.delay));
+      await typeText(line.element, line.text);
+    }
+
+    // Fade in subtitle and CTA together after typing
+    const subtitle = document.getElementById('hero-subtitle');
+    const cta = document.getElementById('hero-cta');
+
+    await new Promise(resolve => setTimeout(resolve, 400));
+
+    // Show both at the same time
+    if (subtitle) {
+      subtitle.classList.remove('opacity-0');
+      subtitle.classList.add('opacity-100');
+    }
+
+    if (cta) {
+      cta.classList.remove('opacity-0', 'translate-y-4');
+      cta.classList.add('opacity-100', 'translate-y-0');
+    }
+  }
+
+  // Start animation when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runTypewriter);
+  } else {
+    runTypewriter();
+  }
+</script>
+
+<style>
+  #hero-cta {
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .hero-btn {
+    position: relative;
+    overflow: hidden;
+    color: var(--color-bg);
+    transition: color 0.3s ease, border-color 0.3s ease, opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent);
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  .hero-btn:hover {
+    color: var(--color-white);
+    border-color: transparent;
+  }
+
+  .hero-btn:hover::before {
+    left: 0;
+  }
+</style>

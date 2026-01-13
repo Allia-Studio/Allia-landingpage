@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ================================
+   Tailwind 4: Theme Configuration
+   ================================ */
+@theme {
+  /* Colors */
+  --color-bg: #272822;
+  --color-bg-dark: #1e1f1a;
+  --color-surface: #1a1a1a; /* Reserved for cards/sections */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #a0a0a0;
+  --color-accent: #f18661;
+
+  /* Font Families */
+  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Archivo Black', system-ui, sans-serif;
+
+  /* Spacing */
+  --spacing-nav: 80px;
+  --spacing-container: 48px;
+  --spacing-container-mobile: 24px;
+
+  /* Z-index */
+  --z-navbar: 1000;
+  --z-navbar-toggle: 1001;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* ================================
+   Base Styles
+   ================================ */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+}
+
+/* ================================
+   Utility Classes
+   ================================ */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-normal);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}

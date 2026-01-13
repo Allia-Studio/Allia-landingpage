@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = 'Allia Studio',
+	description = 'Convertimos grandes ideas en productos digitales robustos y escalables. Somos el socio técnico que tu proyecto necesita.'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Preconnect to Google Fonts for faster loading -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Google Fonts -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap"
+		/>
+
+		<!-- Theme color for mobile browsers -->
+		<meta name="theme-color" content="#272822" />
+
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen">
+		<!-- Skip to content link for accessibility -->
+		<a
+			href="#main-content"
+			class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded"
+		>
+			Saltar al contenido principal
+		</a>
+
+		<slot />
+
+		<!-- Cal.com element-click embed code -->
+		<script is:inline>
+			(function (C, A, L) {
+				let p = function (a, ar) {
+					a.q.push(ar);
+				};
+				let d = C.document;
+				C.Cal =
+					C.Cal ||
+					function () {
+						let cal = C.Cal;
+						let ar = arguments;
+						if (!cal.loaded) {
+							cal.ns = {};
+							cal.q = cal.q || [];
+							d.head.appendChild(d.createElement("script")).src = A;
+							cal.loaded = true;
+						}
+						if (ar[0] === L) {
+							const api = function () {
+								p(api, arguments);
+							};
+							const namespace = ar[1];
+							api.q = api.q || [];
+							if (typeof namespace === "string") {
+								cal.ns[namespace] = cal.ns[namespace] || api;
+								p(cal.ns[namespace], ar);
+								p(cal, ["initNamespace", namespace]);
+							} else p(cal, ar);
+							return;
+						}
+						p(cal, ar);
+					};
+			})(window, "https://app.cal.com/embed/embed.js", "init");
+			Cal("init", "30min", { origin: "https://app.cal.com" });
+
+			Cal.ns["30min"]("ui", {
+				cssVarsPerTheme: { dark: { "cal-brand": "#ffd43b" } },
+				hideEventTypeDetails: false,
+				layout: "column_view",
+			});
+		</script>
+	</body>
+</html>

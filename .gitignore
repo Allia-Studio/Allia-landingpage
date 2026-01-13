@@ -12,6 +12,7 @@ Desktop.ini
 .vscode/
 .idea/
 .claude/
+.mcp.json
 *.sublime-project
 *.sublime-workspace
 *.swp
@@ -46,6 +47,7 @@ build/
 tmp/
 temp/
 *.tmp
+tmpclaude-*
 
 # Backup files
 *.bak
@@ -73,3 +75,9 @@ coverage/
 *.psd
 *.ai
 *.sketch
+
+# others
+docs/
+AVANCES_Y_CAMBIOS.md
+context/
+.astro/

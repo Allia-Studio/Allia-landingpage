@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+
+<Layout>
+	<Navbar />
+	<main id="main-content">
+		<HeroSection />
+
+		<!-- Seccion vacia para probar navbar sticky -->
+		<section class="min-h-screen flex items-center justify-center bg-black text-gray-500 text-lg">
+			<p>Secci&oacute;n de prueba - scroll para verificar navbar sticky</p>
+		</section>
+	</main>
+</Layout>
