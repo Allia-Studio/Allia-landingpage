@@ -64,3 +64,18 @@ export interface SiteConfig {
   description: string;
   themeColor: string;
 }
+
+// ============================================
+// Services Types
+// ============================================
+export interface ServiceTag {
+  label: string;
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  expandedDetails?: string;
+  tags: ServiceTag[];
+}

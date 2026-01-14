@@ -1,0 +1,269 @@
+---
+/**
+ * ServicesSection.astro - Sección completa de servicios
+ * Incluye: lista de servicios, "¿Por qué Allia?", banner teaser y modal
+ */
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import Button from '../ui/Button.astro';
+import Modal from '../ui/Modal.astro';
+import ServiceItem from '../services/ServiceItem.astro';
+import {
+  SERVICES,
+  SERVICES_SECTION,
+  PROGRAM_TEASER,
+  PROGRAM_MODAL,
+  ELEMENT_IDS,
+  CALCOM,
+  WHY_ALLIA_SECTION,
+  WHY_ALLIA_ITEMS,
+} from '../../lib/constants';
+---
+
+<Section id={SERVICES_SECTION.id} background="dark">
+  <Container>
+    <!-- Header de sección -->
+    <header class="mb-10 md:mb-14">
+      <span class="text-[--color-accent] text-sm md:text-base font-medium uppercase tracking-wider mb-3 block">
+        {SERVICES_SECTION.label}
+      </span>
+      <h2 class="font-title text-[clamp(2.5rem,6vw,4.5rem)] text-white leading-tight mb-4">
+        {SERVICES_SECTION.title}
+      </h2>
+      <p class="text-[--color-gray] text-lg md:text-xl max-w-3xl leading-relaxed">
+        {SERVICES_SECTION.subtitle}
+      </p>
+    </header>
+
+    <!-- Lista de servicios -->
+    <div class="services-list">
+      {SERVICES.map((service, index) => (
+        <ServiceItem service={service} index={index} />
+      ))}
+      <!-- Línea final -->
+      <div class="border-t border-white/10"></div>
+    </div>
+
+    <!-- Subsección: ¿Por qué Allia? -->
+    <div class="why-allia mt-16 md:mt-24">
+      <header class="mb-8 md:mb-12">
+        <h3 class="font-title text-[clamp(2rem,5vw,3.5rem)] text-white leading-tight mb-2">
+          {WHY_ALLIA_SECTION.title}
+        </h3>
+        <p class="text-[--color-gray] text-lg md:text-xl">
+          {WHY_ALLIA_SECTION.subtitle}
+        </p>
+      </header>
+
+      <div class="why-allia-list">
+        {WHY_ALLIA_ITEMS.map((item, index) => (
+          <div
+            class="why-item border-t border-white/10 py-6 md:py-8 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-start"
+            data-why-index={index}
+          >
+            <p class="text-white/90 text-base md:text-lg leading-relaxed">
+              {item.text}
+            </p>
+            <span class="font-title text-3xl md:text-4xl text-[--color-accent]/40 tabular-nums">
+              {item.number}
+            </span>
+          </div>
+        ))}
+        <div class="border-t border-white/10"></div>
+      </div>
+    </div>
+
+    <!-- Banner Teaser "Más que una agencia" -->
+    <div class="mt-12 md:mt-16">
+      <div class="teaser-banner bg-gradient-to-r from-[--color-accent]/10 to-transparent border border-[--color-accent]/30 rounded-[--radius-md] p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h3 class="font-title text-xl md:text-2xl text-white mb-1">
+            {PROGRAM_TEASER.title}
+          </h3>
+          <p class="text-[--color-gray] text-base">
+            {PROGRAM_TEASER.description}
+          </p>
+        </div>
+        <Button
+          variant="primary"
+          size="sm"
+          class="teaser-cta shrink-0"
+          id="open-program-modal"
+        >
+          {PROGRAM_TEASER.ctaText}
+        </Button>
+      </div>
+    </div>
+  </Container>
+</Section>
+
+<!-- Modal de Programa -->
+<Modal id={ELEMENT_IDS.servicesModal}>
+  <h3 id={`${ELEMENT_IDS.servicesModal}-title`} class="font-title text-2xl md:text-3xl text-white mb-6">
+    {PROGRAM_MODAL.title}
+  </h3>
+
+  <p class="text-[--color-gray] text-base mb-4">
+    {PROGRAM_MODAL.intro}
+  </p>
+
+  <ul class="space-y-3 mb-6">
+    {PROGRAM_MODAL.requirements.map((req) => (
+      <li class="flex items-start gap-3 text-white/90 text-base">
+        <span class="text-[--color-accent] mt-0.5">&#10003;</span>
+        {req}
+      </li>
+    ))}
+  </ul>
+
+  <p class="text-white text-lg font-medium mb-4">
+    {PROGRAM_MODAL.ctaQuestion}
+  </p>
+
+  <Button
+    href="#"
+    variant="primary"
+    size="md"
+    class="w-full justify-center"
+    data-cal-link={CALCOM.link}
+    data-cal-namespace={CALCOM.namespace}
+    data-cal-config={JSON.stringify(CALCOM.config)}
+  >
+    {PROGRAM_MODAL.ctaText}
+  </Button>
+</Modal>
+
+<script>
+  /**
+   * Services Section Interactivity
+   * - Intersection Observer for fade-in animations
+   * - Modal open/close functionality
+   */
+
+  function initServicesSection() {
+    // ============================================
+    // Intersection Observer for Service Items
+    // ============================================
+    const observerOptions: IntersectionObserverInit = {
+      root: null,
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          const index = parseInt(element.dataset.index || element.dataset.whyIndex || '0', 10);
+
+          // Stagger animation based on index
+          setTimeout(() => {
+            element.classList.add('visible');
+          }, index * 100);
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all service items
+    const serviceItems = document.querySelectorAll('.service-item');
+    serviceItems.forEach((item) => {
+      observer.observe(item);
+    });
+
+    // Observe why items
+    const whyItems = document.querySelectorAll('.why-item');
+    whyItems.forEach((item) => {
+      observer.observe(item);
+    });
+
+    // ============================================
+    // Modal Functionality
+    // ============================================
+    const modal = document.getElementById('services-modal');
+    const openBtn = document.getElementById('open-program-modal');
+    const closeElements = modal?.querySelectorAll('[data-modal-close]');
+
+    function openModal() {
+      if (!modal) return;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+
+      // Focus trap - focus first focusable element
+      const firstFocusable = modal.querySelector('button, a, input') as HTMLElement;
+      firstFocusable?.focus();
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+
+      // Return focus to trigger button
+      openBtn?.focus();
+    }
+
+    // Event listeners
+    openBtn?.addEventListener('click', openModal);
+
+    closeElements?.forEach((el) => {
+      el.addEventListener('click', closeModal);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal?.classList.contains('open')) {
+        closeModal();
+      }
+    });
+
+    // Cleanup for View Transitions
+    document.addEventListener('astro:before-swap', () => {
+      observer.disconnect();
+    }, { once: true });
+  }
+
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initServicesSection);
+  } else {
+    initServicesSection();
+  }
+
+  // Re-initialize on Astro View Transitions
+  document.addEventListener('astro:page-load', initServicesSection);
+</script>
+
+<style>
+  .teaser-banner {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s var(--ease-out-expo) 0.5s forwards;
+  }
+
+  .why-item {
+    opacity: 0;
+    transform: translateY(15px);
+    transition:
+      opacity 0.5s var(--ease-out-expo),
+      transform 0.5s var(--ease-out-expo);
+  }
+
+  .why-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .why-item:hover span {
+    color: var(--color-accent);
+    transition: color var(--transition-normal);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

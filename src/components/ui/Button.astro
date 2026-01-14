@@ -11,7 +11,7 @@ const {
   ...rest
 } = Astro.props;
 
-const baseClasses = 'inline-block font-display font-normal uppercase tracking-wide rounded-[--radius-pill] cursor-pointer relative overflow-hidden';
+const baseClasses = 'inline-flex items-center justify-center font-display font-normal uppercase tracking-wide rounded-[--radius-pill] cursor-pointer relative overflow-hidden';
 
 const sizeClasses = {
   sm: 'px-5 py-3 text-base',
@@ -20,8 +20,8 @@ const sizeClasses = {
 };
 
 const variantClasses = {
-  primary: 'bg-white border-2 border-white btn-primary',
-  secondary: 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-[--color-bg]',
+  primary: 'border-2 border-white btn-primary',
+  secondary: 'bg-transparent border-2 border-white text-white btn-secondary',
   ghost: 'bg-transparent text-white hover:text-[--color-accent]'
 };
 
@@ -30,38 +30,67 @@ const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} 
 
 {href ? (
   <a href={href} class={classes} {...rest}>
-    <slot />
+    <span class="btn-text relative z-10"><slot /></span>
+    <span class="btn-bg"></span>
   </a>
 ) : (
   <button class={classes} {...rest}>
-    <slot />
+    <span class="btn-text relative z-10"><slot /></span>
+    <span class="btn-bg"></span>
   </button>
 )}
 
 <style>
+  /* Primary variant - white bg with orange slide on hover */
   .btn-primary {
     color: var(--color-bg);
-    transition: color var(--transition-normal), border-color var(--transition-normal);
+    background: transparent;
+  }
+
+  .btn-primary .btn-bg {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-white);
+    transition: transform 0.4s var(--ease-out-expo);
+    z-index: 0;
   }
 
   .btn-primary::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: var(--color-accent);
-    transition: left 0.4s var(--ease-out-expo);
-    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform 0.4s var(--ease-out-expo);
+    z-index: 1;
   }
 
   .btn-primary:hover {
     color: var(--color-white);
-    border-color: transparent;
+    border-color: var(--color-accent);
   }
 
   .btn-primary:hover::before {
-    left: 0;
+    transform: translateX(0);
+  }
+
+  .btn-primary .btn-text {
+    z-index: 2;
+  }
+
+  /* Secondary variant - transparent with white border */
+  .btn-secondary {
+    transition:
+      background-color var(--transition-normal),
+      color var(--transition-normal);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-white);
+    color: var(--color-bg);
+  }
+
+  .btn-secondary .btn-bg {
+    display: none;
   }
 </style>

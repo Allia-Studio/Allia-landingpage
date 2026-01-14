@@ -2,17 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/navigation/Navbar.astro';
 import HeroSection from '../components/sections/HeroSection.astro';
-import Section from '../components/ui/Section.astro';
+import ServicesSection from '../components/sections/ServicesSection.astro';
 ---
 
 <Layout>
 	<Navbar />
 	<main id="main-content">
 		<HeroSection />
-
-		<!-- Sección de prueba para verificar navbar sticky -->
-		<Section fullHeight background="dark" class="flex items-center justify-center text-[--color-gray] text-lg">
-			<p>Sección de prueba - scroll para verificar navbar sticky</p>
-		</Section>
+		<ServicesSection />
 	</main>
 </Layout>

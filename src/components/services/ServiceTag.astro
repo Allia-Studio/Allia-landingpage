@@ -1,0 +1,21 @@
+---
+/**
+ * ServiceTag.astro - Tag individual de tecnología
+ */
+interface Props {
+  label: string;
+  class?: string;
+}
+
+const { label, class: className = '' } = Astro.props;
+---
+
+<span class:list={[
+  'text-[--color-accent]',
+  'text-sm md:text-base',
+  'font-medium',
+  'whitespace-nowrap',
+  className
+]}>
+  {label}
+</span>

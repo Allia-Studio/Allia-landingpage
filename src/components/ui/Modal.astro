@@ -1,0 +1,76 @@
+---
+/**
+ * Modal.astro - Componente modal reutilizable
+ * Con backdrop blur, close button y animación fade-in
+ */
+interface Props {
+  id: string;
+  class?: string;
+}
+
+const { id, class: className = '' } = Astro.props;
+---
+
+<div
+  id={id}
+  class="modal fixed inset-0 z-50 hidden items-center justify-center p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby={`${id}-title`}
+>
+  <!-- Backdrop -->
+  <div class="modal-backdrop absolute inset-0 bg-black/70 backdrop-blur-sm" data-modal-close></div>
+
+  <!-- Content -->
+  <div class:list={[
+    'modal-content',
+    'relative',
+    'bg-[--color-bg-dark]',
+    'border border-white/10',
+    'rounded-[--radius-md]',
+    'p-6 md:p-8',
+    'max-w-md w-full',
+    'max-h-[90vh] overflow-y-auto',
+    className
+  ]}>
+    <!-- Close button -->
+    <button
+      type="button"
+      class="absolute top-4 right-4 text-[--color-gray] hover:text-white transition-colors"
+      data-modal-close
+      aria-label="Cerrar modal"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Slot para contenido -->
+    <slot />
+  </div>
+</div>
+
+<style>
+  .modal {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s var(--ease-out-expo),
+      visibility 0.3s;
+  }
+
+  .modal.open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-content {
+    transform: translateY(20px) scale(0.95);
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+
+  .modal.open .modal-content {
+    transform: translateY(0) scale(1);
+  }
+</style>
