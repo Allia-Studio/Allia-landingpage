@@ -1,15 +1,19 @@
 ---
-import Container from '../ui/Container.astro';
 import { NAV_LINKS } from '../../lib/constants';
 ---
 
 <nav
-  class="fixed top-0 left-0 w-full z-[var(--z-navbar)] pt-[var(--spacing-nav-top)] px-[var(--spacing-container-mobile)] md:px-[var(--spacing-container)] h-[var(--spacing-nav-height)] flex items-start"
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-[var(--z-navbar)] pt-[var(--spacing-nav-top)] px-[var(--spacing-container-mobile)] md:px-[var(--spacing-container)]"
   aria-label="Navegación principal"
 >
-  <Container class="flex justify-between items-center">
+  <!-- Inner container - same max-width as page content for alignment -->
+  <div class="w-full max-w-[var(--container-max-width)] mx-auto flex justify-between items-center">
+    <!-- Logo wrapper (píldora izquierda) -->
+  <div class="logo-wrapper flex items-center py-2 px-4 rounded-[--radius-pill] transition-colors duration-400">
     <a href="/" class="flex items-center" aria-label="Allia Studio - Ir al inicio">
-      <picture>
+      <!-- Logo for dark background (default) -->
+      <picture class="logo-dark block">
         <source srcset="/logo-para-fondo-oscuro.webp" type="image/webp" />
         <img
           src="/logo-para-fondo-oscuro.png"
@@ -19,36 +23,50 @@ import { NAV_LINKS } from '../../lib/constants';
           height="40"
         />
       </picture>
+      <!-- Logo for light background (scrolled state) -->
+      <picture class="logo-light hidden">
+        <source srcset="/logo-para-fondo-claro.webp" type="image/webp" />
+        <img
+          src="/logo-para-fondo-claro.png"
+          alt="Allia Studio"
+          class="h-10 w-auto"
+          width="144"
+          height="40"
+        />
+      </picture>
     </a>
+  </div>
 
-    <!-- Desktop menu -->
-    <div class="hidden md:flex items-center gap-[var(--spacing-nav-gap)]">
-      {NAV_LINKS.map((link) => (
-        <a
-          href={link.href}
-          class="font-display text-xl text-white uppercase tracking-wide link-underline"
-        >
-          {link.label}
-        </a>
-      ))}
-    </div>
+  <!-- Nav links wrapper (píldora derecha - desktop) -->
+  <div class="nav-wrapper hidden md:flex items-center gap-[var(--spacing-nav-gap)] py-2 px-6 rounded-[--radius-pill] transition-colors duration-400">
+    {NAV_LINKS.map((link) => (
+      <a
+        href={link.href}
+        class="nav-link font-display text-lg text-white uppercase tracking-wide link-underline transition-colors duration-400"
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
 
-    <!-- Mobile menu button -->
+  <!-- Mobile toggle wrapper (píldora derecha - mobile) -->
+  <div class="toggle-wrapper md:hidden p-1 rounded-[--radius-pill] transition-colors duration-400">
     <button
-      class="md:hidden text-white p-2 z-[var(--z-navbar-toggle)]"
+      class="text-white p-2 z-[var(--z-navbar-toggle)] transition-colors duration-400"
       aria-label="Abrir menú de navegación"
       aria-expanded="false"
       aria-controls="mobile-menu"
       id="menu-toggle"
     >
-      <svg class="w-8 h-8 hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="w-7 h-7 hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
-      <svg class="w-8 h-8 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="w-7 h-7 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
-  </Container>
+  </div>
+  </div>
 
   <!-- Mobile menu panel -->
   <div
@@ -68,17 +86,105 @@ import { NAV_LINKS } from '../../lib/constants';
   </div>
 </nav>
 
+<style>
+  /* Transition for color/background changes only (no layout shift) */
+  .duration-400 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Base wrapper styles - transparent background */
+  .logo-wrapper,
+  .nav-wrapper,
+  .toggle-wrapper {
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  /* Scrolled state - only visual changes, NO padding/size changes */
+  #navbar.scrolled .logo-wrapper,
+  #navbar.scrolled .nav-wrapper,
+  #navbar.scrolled .toggle-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Text color changes when scrolled */
+  #navbar.scrolled .nav-link {
+    color: var(--color-bg);
+  }
+
+  #navbar.scrolled .nav-link::after {
+    background-color: var(--color-bg);
+  }
+
+  #navbar.scrolled #menu-toggle {
+    color: var(--color-bg);
+  }
+
+  /* Logo swap when scrolled */
+  #navbar.scrolled .logo-dark {
+    display: none;
+  }
+
+  #navbar.scrolled .logo-light {
+    display: block;
+  }
+</style>
+
 <script>
+  const navbar = document.getElementById('navbar');
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
   const hamburgerIcon = toggle?.querySelector('.hamburger-icon');
   const closeIcon = toggle?.querySelector('.close-icon');
   const mobileLinks = menu?.querySelectorAll('.mobile-nav-link');
 
-  if (toggle && menu && hamburgerIcon && closeIcon && mobileLinks) {
+  // Scroll threshold for navbar transformation
+  const SCROLL_THRESHOLD = 80;
+
+  if (navbar) {
     // AbortController for cleanup (View Transitions compatibility)
     const controller = new AbortController();
     const { signal } = controller;
+
+    // Scroll handler with requestAnimationFrame for performance
+    let ticking = false;
+    const handleScroll = (): void => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          if (scrollY > SCROLL_THRESHOLD) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScroll, { signal, passive: true });
+
+    // Initial check on page load
+    handleScroll();
+
+    // Cleanup on View Transitions navigation
+    document.addEventListener('astro:before-swap', () => {
+      controller.abort();
+    }, { once: true });
+  }
+
+  if (toggle && menu && hamburgerIcon && closeIcon && mobileLinks) {
+    // AbortController for cleanup (View Transitions compatibility)
+    const menuController = new AbortController();
+    const { signal } = menuController;
 
     // Helper to check if menu is open
     const isMenuOpen = (): boolean => toggle.getAttribute('aria-expanded') === 'true';
@@ -162,7 +268,7 @@ import { NAV_LINKS } from '../../lib/constants';
 
     // Cleanup on View Transitions navigation
     document.addEventListener('astro:before-swap', () => {
-      controller.abort();
+      menuController.abort();
       closeMenu();
     }, { once: true });
   }

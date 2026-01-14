@@ -15,7 +15,8 @@
 
   /* Font Families */
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Archivo Black', system-ui, sans-serif;
+  --font-title: 'Changa One', cursive, system-ui, sans-serif;
+  --font-display: 'Rowdies', cursive, system-ui, sans-serif;
 
   /* Container */
   --container-max-width: 1800px;
@@ -37,10 +38,21 @@
   --z-navbar: 1000;
   --z-navbar-toggle: 1001;
 
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 12px;
+
+  /* Easing Functions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
   /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.7s ease;
+  --transition-fast: 0.25s var(--ease-in-out);
+  --transition-normal: 0.35s var(--ease-in-out);
+  --transition-slow: 0.6s var(--ease-out-expo);
 }
 
 /* ================================
@@ -68,7 +80,8 @@ body {
 /* Link underline animation */
 .link-underline {
   position: relative;
-  padding-bottom: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .link-underline::after {
@@ -77,11 +90,16 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: var(--color-accent);
   transition: width var(--transition-normal);
 }
 
 .link-underline:hover::after {
   width: 100%;
+}
+
+/* Font utility classes */
+.font-title {
+  font-family: var(--font-title);
 }
