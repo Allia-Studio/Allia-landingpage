@@ -1,0 +1,47 @@
+---
+/**
+ * Grid.astro - Sistema de grid responsivo para layouts de secciones
+ */
+interface Props {
+  /** Número de columnas (1-4) */
+  cols?: 1 | 2 | 3 | 4;
+  /** Espaciado entre elementos */
+  gap?: 'sm' | 'md' | 'lg' | 'xl';
+  /** Clases adicionales */
+  class?: string;
+  /** Alineación vertical de items */
+  align?: 'start' | 'center' | 'end' | 'stretch';
+}
+
+const {
+  cols = 3,
+  gap = 'md',
+  class: className = '',
+  align = 'stretch'
+} = Astro.props;
+
+const colsClasses: Record<number, string> = {
+  1: 'grid-cols-1',
+  2: 'grid-cols-1 md:grid-cols-2',
+  3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+  4: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+};
+
+const gapClasses: Record<string, string> = {
+  sm: 'gap-4',
+  md: 'gap-6 md:gap-8',
+  lg: 'gap-8 md:gap-12',
+  xl: 'gap-12 md:gap-16'
+};
+
+const alignClasses: Record<string, string> = {
+  start: 'items-start',
+  center: 'items-center',
+  end: 'items-end',
+  stretch: 'items-stretch'
+};
+---
+
+<div class:list={['grid', colsClasses[cols], gapClasses[gap], alignClasses[align], className]}>
+  <slot />
+</div>

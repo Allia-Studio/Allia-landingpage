@@ -1,5 +1,7 @@
 ---
 import { NAV_LINKS } from '../../lib/constants';
+import IconMenu from '../icons/IconMenu.astro';
+import IconClose from '../icons/IconClose.astro';
 ---
 
 <nav
@@ -52,12 +54,8 @@ import { NAV_LINKS } from '../../lib/constants';
       aria-controls="mobile-menu"
       id="menu-toggle"
     >
-      <svg class="w-7 h-7 hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <svg class="w-7 h-7 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
+      <IconMenu class="hamburger-icon" size={28} />
+      <IconClose class="close-icon hidden" size={28} />
     </button>
   </div>
   </div>

@@ -1,0 +1,49 @@
+---
+/**
+ * Card.astro - Componente base para tarjetas de contenido
+ */
+interface Props {
+  /** Variante visual */
+  variant?: 'default' | 'elevated' | 'outlined' | 'glass';
+  /** Padding interno */
+  padding?: 'sm' | 'md' | 'lg';
+  /** Clases adicionales */
+  class?: string;
+  /** Hacer la card clickeable (hover effects) */
+  interactive?: boolean;
+}
+
+const {
+  variant = 'default',
+  padding = 'md',
+  class: className = '',
+  interactive = false
+} = Astro.props;
+
+const variantClasses: Record<string, string> = {
+  default: 'bg-[--color-surface]',
+  elevated: 'bg-[--color-surface] shadow-lg shadow-black/20',
+  outlined: 'bg-transparent border border-white/10',
+  glass: 'bg-white/5 backdrop-blur-sm border border-white/10'
+};
+
+const paddingClasses: Record<string, string> = {
+  sm: 'p-4',
+  md: 'p-6',
+  lg: 'p-8'
+};
+
+const interactiveClasses = interactive
+  ? 'transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer'
+  : '';
+---
+
+<div class:list={[
+  'rounded-[--radius-md]',
+  variantClasses[variant],
+  paddingClasses[padding],
+  interactiveClasses,
+  className
+]}>
+  <slot />
+</div>
