@@ -12,28 +12,22 @@ import { NAV_LINKS } from '../../lib/constants';
     <!-- Logo wrapper (píldora izquierda) -->
   <div class="logo-wrapper flex items-center py-2 px-4 rounded-[--radius-pill] transition-colors duration-400">
     <a href="/" class="flex items-center" aria-label="Allia Studio - Ir al inicio">
-      <!-- Logo for dark background (default) -->
-      <picture class="logo-dark block">
-        <source srcset="/logo-para-fondo-oscuro.webp" type="image/webp" />
-        <img
-          src="/logo-para-fondo-oscuro.png"
-          alt="Allia Studio"
-          class="h-10 w-auto"
-          width="144"
-          height="40"
-        />
-      </picture>
-      <!-- Logo for light background (scrolled state) -->
-      <picture class="logo-light hidden">
-        <source srcset="/logo-para-fondo-claro.webp" type="image/webp" />
-        <img
-          src="/logo-para-fondo-claro.png"
-          alt="Allia Studio"
-          class="h-10 w-auto"
-          width="144"
-          height="40"
-        />
-      </picture>
+      <!-- Logo for dark background (default) - white logo -->
+      <img
+        src="/logo-fondo-oscuro.svg"
+        alt="Allia Studio"
+        class="logo-dark h-12 w-auto"
+        width="130"
+        height="48"
+      />
+      <!-- Logo for light background (scrolled state) - dark logo -->
+      <img
+        src="/logo-fondo-claro.svg"
+        alt="Allia Studio"
+        class="logo-light h-12 w-auto"
+        width="130"
+        height="48"
+      />
     </a>
   </div>
 
@@ -124,6 +118,15 @@ import { NAV_LINKS } from '../../lib/constants';
 
   #navbar.scrolled #menu-toggle {
     color: var(--color-bg);
+  }
+
+  /* Logo visibility - default state */
+  .logo-dark {
+    display: block;
+  }
+
+  .logo-light {
+    display: none;
   }
 
   /* Logo swap when scrolled */

@@ -1,0 +1,48 @@
+---
+/**
+ * Section.astro - Componente base para secciones de landing
+ * Estandariza padding, background y estructura
+ */
+interface Props {
+  id?: string;
+  class?: string;
+  background?: 'default' | 'dark' | 'light' | 'surface';
+  fullHeight?: boolean;
+  /** Agrega padding vertical estándar */
+  padded?: boolean;
+}
+
+const {
+  id,
+  class: className = '',
+  background = 'default',
+  fullHeight = false,
+  padded = true
+} = Astro.props;
+
+const bgClasses: Record<string, string> = {
+  default: 'bg-[--color-bg]',
+  dark: 'bg-[--color-bg-dark]',
+  light: 'bg-[--color-white] text-[--color-bg]',
+  surface: 'bg-[--color-surface]'
+};
+
+const baseClasses = [
+  'relative',
+  'px-[var(--spacing-container-mobile)]',
+  'md:px-[var(--spacing-container)]',
+  bgClasses[background]
+];
+
+if (fullHeight) {
+  baseClasses.push('min-h-screen', 'flex', 'items-center');
+}
+
+if (padded) {
+  baseClasses.push('py-16', 'md:py-24');
+}
+---
+
+<section id={id} class:list={[baseClasses, className]}>
+  <slot />
+</section>
