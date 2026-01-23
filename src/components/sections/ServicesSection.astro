@@ -137,10 +137,27 @@ import {
   /**
    * Services Section Interactivity
    * - Intersection Observer for fade-in animations
-   * - Modal open/close functionality
+   * - Modal open/close functionality with focus trap
    */
 
+  // Singleton to prevent duplicate observers on re-initialization
+  let currentObserver: IntersectionObserver | null = null;
+  let currentController: AbortController | null = null;
+
   function initServicesSection() {
+    // Cleanup previous instance if exists
+    if (currentObserver) {
+      currentObserver.disconnect();
+    }
+    if (currentController) {
+      currentController.abort();
+    }
+
+    // Create new AbortController for event listeners cleanup
+    const controller = new AbortController();
+    const { signal } = controller;
+    currentController = controller;
+
     // ============================================
     // Intersection Observer for Service Items
     // ============================================
@@ -166,6 +183,8 @@ import {
       });
     }, observerOptions);
 
+    currentObserver = observer;
+
     // Observe all service items
     const serviceItems = document.querySelectorAll('.service-item');
     serviceItems.forEach((item) => {
@@ -179,20 +198,30 @@ import {
     });
 
     // ============================================
-    // Modal Functionality
+    // Modal Functionality with Focus Trap
     // ============================================
     const modal = document.getElementById('services-modal');
     const openBtn = document.getElementById('open-program-modal');
     const closeElements = modal?.querySelectorAll('[data-modal-close]');
+
+    // Get all focusable elements in modal
+    function getFocusableElements(): HTMLElement[] {
+      if (!modal) return [];
+      return Array.from(
+        modal.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((el) => !el.hasAttribute('disabled') && el.offsetParent !== null);
+    }
 
     function openModal() {
       if (!modal) return;
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
 
-      // Focus trap - focus first focusable element
-      const firstFocusable = modal.querySelector('button, a, input') as HTMLElement;
-      firstFocusable?.focus();
+      // Focus first focusable element
+      const focusable = getFocusableElements();
+      focusable[0]?.focus();
     }
 
     function closeModal() {
@@ -204,23 +233,45 @@ import {
       openBtn?.focus();
     }
 
-    // Event listeners
-    openBtn?.addEventListener('click', openModal);
+    // Event listeners with AbortController signal
+    openBtn?.addEventListener('click', openModal, { signal });
 
     closeElements?.forEach((el) => {
-      el.addEventListener('click', closeModal);
+      el.addEventListener('click', closeModal, { signal });
     });
 
-    // Close on Escape key
+    // Keyboard handling: Escape to close, Tab for focus trap
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal?.classList.contains('open')) {
+      if (!modal?.classList.contains('open')) return;
+
+      // Close on Escape
+      if (e.key === 'Escape') {
         closeModal();
+        return;
       }
-    });
+
+      // Focus trap on Tab
+      if (e.key === 'Tab') {
+        const focusable = getFocusableElements();
+        if (focusable.length === 0) return;
+
+        const firstEl = focusable[0];
+        const lastEl = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        } else if (!e.shiftKey && document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    }, { signal });
 
     // Cleanup for View Transitions
     document.addEventListener('astro:before-swap', () => {
       observer.disconnect();
+      controller.abort();
     }, { once: true });
   }
 

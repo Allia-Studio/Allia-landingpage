@@ -11,7 +11,7 @@ Desktop.ini
 # Editor Files
 .vscode/
 .idea/
-.claude/
+# .claude/
 .mcp.json
 *.sublime-project
 *.sublime-workspace

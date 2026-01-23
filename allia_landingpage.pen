@@ -1,0 +1,4488 @@
+{
+  "version": "2.6",
+  "children": [
+    {
+      "type": "frame",
+      "id": "Gl54r",
+      "x": 201,
+      "y": 200,
+      "name": "Allia Landing Page",
+      "clip": true,
+      "width": 1440,
+      "fill": "#272822",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "F5IK5",
+          "name": "Navbar",
+          "width": "fill_container",
+          "height": 72,
+          "fill": "#272822",
+          "padding": [
+            0,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "yTzXm",
+              "name": "Logo",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "J0hgi",
+                  "name": "Logo Icon",
+                  "width": 36,
+                  "height": 36,
+                  "fill": "#f18661"
+                },
+                {
+                  "type": "text",
+                  "id": "SOiQG",
+                  "name": "logoText",
+                  "fill": "#ffffff",
+                  "content": "Allia Studio",
+                  "fontFamily": "Changa One",
+                  "fontSize": 22,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wnjFC",
+              "name": "Nav Links",
+              "width": "fill_container",
+              "gap": 40,
+              "justifyContent": "end",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oZJSn",
+                  "name": "navLinkServicios",
+                  "fill": "#ffffff",
+                  "content": "SERVICIOS.",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.5
+                },
+                {
+                  "type": "text",
+                  "id": "cOaOK",
+                  "name": "navLink1",
+                  "fill": "#ffffff",
+                  "content": "PROCESO.",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.5
+                },
+                {
+                  "type": "text",
+                  "id": "4XmDz",
+                  "name": "navLink2",
+                  "fill": "#ffffff",
+                  "content": "PROYECTOS.",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.5
+                },
+                {
+                  "type": "text",
+                  "id": "UEmGx",
+                  "name": "navLink3",
+                  "fill": "#ffffff",
+                  "content": "BLOG.",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.5
+                },
+                {
+                  "type": "text",
+                  "id": "JkeOF",
+                  "name": "navLink4",
+                  "fill": "#ffffff",
+                  "content": "FAQ.",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pldJ0",
+          "name": "Section: Hero",
+          "width": "fill_container",
+          "height": 650,
+          "fill": "#272822",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            100,
+            80,
+            120,
+            80
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Rz930",
+              "name": "Hero Content",
+              "width": "fill_container",
+              "gap": 64,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "LRLYJ",
+                  "name": "Hero Left",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 28,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Fb954",
+                      "name": "heroLabel",
+                      "enabled": false,
+                      "fill": "#f18661",
+                      "content": "AGENCIA DE DESARROLLO",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "g7135",
+                      "name": "heroTitle",
+                      "fill": "#ffffff",
+                      "content": "TU VISIÓN.\nNUESTRA INGENIERÍA.",
+                      "lineHeight": 1,
+                      "fontFamily": "Changa One",
+                      "fontSize": 108,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "I0QOs",
+                      "name": "heroDesc",
+                      "fill": "#b0b0b0",
+                      "textGrowth": "fixed-width",
+                      "width": 700,
+                      "content": "Convertimos grandes ideas en productos digitales robustos y escalables. Somos el socio técnico que tu proyecto necesita.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Inter",
+                      "fontSize": 23,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vH0QA",
+                      "name": "CTAs",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "0ETwR",
+                          "name": "heroCTA1",
+                          "fill": "#ffffff",
+                          "cornerRadius": 8,
+                          "padding": [
+                            14,
+                            28
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "KjEwJ",
+                              "name": "heroCTA1Text",
+                              "fill": "#272822",
+                              "content": "Conversemos →",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 12,
+                              "fontWeight": "normal",
+                              "letterSpacing": 1.5
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VZ9BZ",
+                          "name": "heroCTA2",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#555555"
+                          },
+                          "padding": [
+                            14,
+                            28
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nrTIH",
+                              "name": "heroCTA2Text",
+                              "fill": "#888888",
+                              "content": "Ver proyectos",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 12,
+                              "fontWeight": "normal",
+                              "letterSpacing": 1.5
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "V5IIX",
+          "name": "Section: Servicios",
+          "width": "fill_container",
+          "fill": "#f5f5f5",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            100,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "VnvUR",
+              "name": "Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yfUXF",
+                  "name": "serviciosLabel",
+                  "fill": "#f18661",
+                  "content": "Servicios",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "GIHaN",
+                  "name": "serviciosTitle",
+                  "fill": "#272822",
+                  "content": "QUÉ HACEMOS.",
+                  "textAlign": "center",
+                  "fontFamily": "Changa One",
+                  "fontSize": 76,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Ftt6E",
+                  "name": "serviciosSubtitle",
+                  "fill": "#555555",
+                  "content": "Diseñamos, construimos y escalamos productos digitales para empresas que valoran la calidad y la colaboración real.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ODlX9",
+              "name": "Services Grid",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "b2mxH",
+                  "name": "Card ML",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "14tLJ",
+                      "name": "card1Icon",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#f1866620",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "5Zow9",
+                          "name": "icon1",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "brain",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f18661"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "KWVDq",
+                      "name": "card1Title",
+                      "fill": "#272822",
+                      "content": "Machine Learning e IA",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fgS0B",
+                      "name": "card1Desc",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Implementación de soluciones inteligentes para optimizar procesos y obtener insights valiosos de tus datos.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LedVf",
+                      "name": "Tags",
+                      "width": "fill_container",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "gH4G5",
+                          "name": "card1T1",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "EH6BS",
+                              "name": "card1T1Text",
+                              "fill": "#f18661",
+                              "content": "Python",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "JkIW8",
+                          "name": "card1T2",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "OINv7",
+                              "name": "card1T2Text",
+                              "fill": "#f18661",
+                              "content": "TensorFlow",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "SKzVx",
+                          "name": "card1T3",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AL6cy",
+                              "name": "card1T3Text",
+                              "fill": "#f18661",
+                              "content": "Claude API",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "0nb0W",
+                          "name": "tag1_4",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "w05bh",
+                              "name": "tag1_4txt",
+                              "fill": "#f18661",
+                              "content": "OpenAI",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Q95Bg",
+                          "name": "tag1_5",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "TgpQ7",
+                              "name": "tag1_5txt",
+                              "fill": "#f18661",
+                              "content": "LangChain",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FhfAX",
+                  "name": "Card Web",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "7NTPc",
+                      "name": "card2Icon",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#f1866620",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "n4FrF",
+                          "name": "icon2",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "globe",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f18661"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "bX7tT",
+                      "name": "card2Title",
+                      "fill": "#272822",
+                      "content": "Aplicaciones Web",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LPsiK",
+                      "name": "card2Desc",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Desarrollo de plataformas web modernas, escalables y con experiencias de usuario excepcionales.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ds9K0",
+                      "name": "Tags",
+                      "width": "fill_container",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "SCG21",
+                          "name": "card2T1",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "RYzYQ",
+                              "name": "card2T1Text",
+                              "fill": "#f18661",
+                              "content": "React",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "PbO8O",
+                          "name": "card2T2",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "l8YKd",
+                              "name": "card2T2Text",
+                              "fill": "#f18661",
+                              "content": "Next.js",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nMOiK",
+                          "name": "card2T3",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WfyLS",
+                              "name": "card2T3Text",
+                              "fill": "#f18661",
+                              "content": "Node.js",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "aQn4C",
+                          "name": "tag2_4",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "aSWvI",
+                              "name": "tag2_4txt",
+                              "fill": "#f18661",
+                              "content": "TypeScript",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "drhJA",
+                          "name": "tag2_5",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rjnhF",
+                              "name": "tag2_5txt",
+                              "fill": "#f18661",
+                              "content": "PostgreSQL",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mtZan",
+                  "name": "Card Desktop",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lKoBN",
+                      "name": "card3Icon",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#f1866620",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "kmWLt",
+                          "name": "icon3",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "monitor",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f18661"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "dx55z",
+                      "name": "card3Title",
+                      "fill": "#272822",
+                      "content": "Apps de Escritorio",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "26Hzf",
+                      "name": "card3Desc",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Aplicaciones nativas para Windows, macOS y Linux con rendimiento óptimo y experiencia fluida.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "B0S1b",
+                      "name": "Tags",
+                      "width": "fill_container",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "a0PRd",
+                          "name": "card3T1",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "jTIGf",
+                              "name": "card3T1Text",
+                              "fill": "#f18661",
+                              "content": "Electron",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UJiJw",
+                          "name": "card3T2",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "6Alz5",
+                              "name": "card3T2Text",
+                              "fill": "#f18661",
+                              "content": "Tauri",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "WwHKE",
+                          "name": "card3T3",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "erhb3",
+                              "name": "card3T3Text",
+                              "fill": "#f18661",
+                              "content": ".NET",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "chrIV",
+                          "name": "tag3_4",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lkTtd",
+                              "name": "tag3_4txt",
+                              "fill": "#f18661",
+                              "content": "C++",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gk0yi",
+              "name": "Services Grid 2",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wfcSz",
+                  "name": "Card Mobile",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LncFM",
+                      "name": "card4Icon",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#f1866620",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "QoMyi",
+                          "name": "icon4",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "smartphone",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f18661"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "2yphH",
+                      "name": "card4Title",
+                      "fill": "#272822",
+                      "content": "Apps Móviles",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lHS0N",
+                      "name": "card4Desc",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Desarrollo de aplicaciones móviles nativas y multiplataforma para iOS y Android.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gNvL2",
+                      "name": "Tags",
+                      "width": "fill_container",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Nq9kX",
+                          "name": "card4T1",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xSimR",
+                              "name": "card4T1Text",
+                              "fill": "#f18661",
+                              "content": "React Native",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "rckZP",
+                          "name": "card4T2",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "1IL4O",
+                              "name": "card4T2Text",
+                              "fill": "#f18661",
+                              "content": "Flutter",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "E7Jm0",
+                          "name": "card4T3",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "4g5Z7",
+                              "name": "card4T3Text",
+                              "fill": "#f18661",
+                              "content": "Swift",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oi5Fa",
+                          "name": "tag4_4",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xQfMT",
+                              "name": "tag4_4txt",
+                              "fill": "#f18661",
+                              "content": "iOS",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "I4jXV",
+                          "name": "tag4_5",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "YTXtg",
+                              "name": "tag4_5txt",
+                              "fill": "#f18661",
+                              "content": "Android",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AHa70",
+                  "name": "Card Consulting",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dkrdO",
+                      "name": "card5Icon",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#f1866620",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "1ymHT",
+                          "name": "icon5",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "lightbulb",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f18661"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "fCkfc",
+                      "name": "card5Title",
+                      "fill": "#272822",
+                      "content": "Consultoría Tecnológica",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zx9ss",
+                      "name": "card5Desc",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Asesoría estratégica para definir arquitectura, stack tecnológico y roadmap de desarrollo.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UpoQD",
+                      "name": "Tags",
+                      "width": "fill_container",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "OGJkC",
+                          "name": "card5T1",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "z8WIl",
+                              "name": "card5T1Text",
+                              "fill": "#f18661",
+                              "content": "Arquitectura",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "8AEw1",
+                          "name": "card5T2",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "J0VWa",
+                              "name": "card5T2Text",
+                              "fill": "#f18661",
+                              "content": "AWS",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "r6m9s",
+                          "name": "card5T3",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "oJYVt",
+                              "name": "card5T3Text",
+                              "fill": "#f18661",
+                              "content": "DevOps",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "PKUUD",
+                          "name": "tag5_4",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "wMNvZ",
+                              "name": "tag5_4txt",
+                              "fill": "#f18661",
+                              "content": "GCP",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z6SPT",
+                  "name": "Card Automation",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "enbrR",
+                      "name": "card6Icon",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#f1866620",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "Gl0ir",
+                          "name": "icon6",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "zap",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f18661"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "hURVm",
+                      "name": "card6Title",
+                      "fill": "#272822",
+                      "content": "Automatizaciones",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Xrh9w",
+                      "name": "card6Desc",
+                      "fill": "#555555",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Automatización de procesos empresariales, integraciones y flujos de trabajo eficientes.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4xTjK",
+                      "name": "Tags",
+                      "width": "fill_container",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "oh8Yz",
+                          "name": "card6T1",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "aLGJt",
+                              "name": "card6T1Text",
+                              "fill": "#f18661",
+                              "content": "n8n",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "i68q3",
+                          "name": "card6T2",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lYnH9",
+                              "name": "card6T2Text",
+                              "fill": "#f18661",
+                              "content": "Zapier",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "7dU0g",
+                          "name": "card6T3",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "3T7KE",
+                              "name": "card6T3Text",
+                              "fill": "#f18661",
+                              "content": "APIs",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Qz4PE",
+                          "name": "tag6_4",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "HCVOW",
+                              "name": "tag6_4txt",
+                              "fill": "#f18661",
+                              "content": "Webhooks",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "OEZCB",
+                          "name": "tag6_5",
+                          "fill": "#f5f5f5",
+                          "cornerRadius": 100,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#e0e0e0"
+                          },
+                          "padding": [
+                            6,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "R498g",
+                              "name": "tag6_5txt",
+                              "fill": "#f18661",
+                              "content": "ETL",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Onxf8",
+          "name": "Section: Proceso",
+          "width": "fill_container",
+          "fill": "#272822",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            100,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "qMxtn",
+              "name": "Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9DveB",
+                  "name": "procesoLabel",
+                  "fill": "#f18661",
+                  "content": "Cómo Trabajamos",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "UONGa",
+                  "name": "procesoTitle",
+                  "fill": "#ffffff",
+                  "content": "DOS MOTORES, UN OBJETIVO.",
+                  "textAlign": "center",
+                  "fontFamily": "Changa One",
+                  "fontSize": 76,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "IH5wK",
+                  "name": "procesoSubtitle",
+                  "fill": "#b0b0b0",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Modelo híbrido que combina servicios tradicionales de agencia con un programa selectivo de financiamiento. Generamos flujo de caja estable mientras construimos activos de largo plazo.",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YIWcK",
+              "name": "Timeline",
+              "width": "fill_container",
+              "gap": 20,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IBLaa",
+                  "name": "Phase 1",
+                  "width": "fill_container",
+                  "fill": "#1a1a1a",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tONt3",
+                      "name": "phase1Num",
+                      "fill": "#f1866125",
+                      "content": "A",
+                      "fontFamily": "Changa One",
+                      "fontSize": 72,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Wr9Ip",
+                      "name": "phase1Title",
+                      "fill": "#ffffff",
+                      "content": "Motor Agencia",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iTynQ",
+                      "name": "phase1Duration",
+                      "fill": "#f18661",
+                      "content": "70% de proyectos",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uPy1G",
+                      "name": "phase1Desc",
+                      "fill": "#b0b0b0",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Servicios tradicionales de desarrollo para empresas con presupuesto completo. Startups financiadas, empresas establecidas, emprendedores con capital propio.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "USUC8",
+                      "name": "Deliverables",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GU3Zl",
+                          "name": "phase1D1",
+                          "fill": "#a0a0a0",
+                          "content": "• Pago directo: 30-50% enganche + hitos",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "YQ4ay",
+                          "name": "phase1D2",
+                          "fill": "#a0a0a0",
+                          "content": "• Transferencia al completar pago",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "4BcDW",
+                          "name": "phase1D3",
+                          "fill": "#a0a0a0",
+                          "content": "• Flujo de caja estable y predecible",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kl0Vv",
+                          "name": "phase1D4",
+                          "fill": "#a0a0a0",
+                          "content": "• Intercambio limpio y definitivo",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "GGmpY",
+                  "name": "Phase 2",
+                  "width": "fill_container",
+                  "fill": "#1a1a1a",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2Z5gI",
+                      "name": "phase2Num",
+                      "fill": "#f1866125",
+                      "content": "B",
+                      "fontFamily": "Changa One",
+                      "fontSize": 72,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AIi7g",
+                      "name": "phase2Title",
+                      "fill": "#ffffff",
+                      "content": "Motor Financiamiento",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dcUs0",
+                      "name": "phase2Duration",
+                      "fill": "#f18661",
+                      "content": "30% de proyectos",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aJ7Iy",
+                      "name": "phase2Desc",
+                      "fill": "#b0b0b0",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Programa selectivo para startups con validación real pero sin liquidez inmediata. Fundadores con expertise profundo en su industria (5-10+ años).",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7KOuO",
+                      "name": "Deliverables",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LyOcv",
+                          "name": "phase2D1",
+                          "fill": "#a0a0a0",
+                          "content": "• Enganche menor: 10-30%",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "I4VxW",
+                          "name": "phase2D2",
+                          "fill": "#a0a0a0",
+                          "content": "• Período de gracia: 2-6 meses",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "V9GSZ",
+                          "name": "phase2D3",
+                          "fill": "#a0a0a0",
+                          "content": "• Cuotas mensuales post-ingresos",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HmABY",
+                          "name": "phase2D4",
+                          "fill": "#a0a0a0",
+                          "content": "• Retención de propiedad hasta pago total",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "QICVc",
+          "name": "Section: Proyectos",
+          "width": "fill_container",
+          "fill": "#f5f5f5",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            100,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "evOws",
+              "name": "Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "h1bdp",
+                  "name": "proyectosLabel",
+                  "fill": "#f18661",
+                  "content": "Proyectos",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "HMN3o",
+                  "name": "proyectosTitle",
+                  "fill": "#272822",
+                  "content": "SOFTWARE QUE GENERA IMPACTO.",
+                  "textAlign": "center",
+                  "fontFamily": "Changa One",
+                  "fontSize": 76,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "LlIhL",
+                  "name": "proyectosSubtitle",
+                  "fill": "#555555",
+                  "content": "Productos que hemos construido para clientes y ventures propios.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UqmPk",
+              "name": "Filters",
+              "width": "fill_container",
+              "fill": "#e8e8e8",
+              "cornerRadius": 100,
+              "gap": 8,
+              "padding": 6,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PvhDk",
+                  "name": "Filter All",
+                  "fill": "#272822",
+                  "cornerRadius": 100,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "9BlfM",
+                      "name": "filterAllTxt",
+                      "fill": "#ffffff",
+                      "content": "Todos",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "R4Sui",
+                  "name": "Filter Web",
+                  "cornerRadius": 100,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MQL21",
+                      "name": "filterWebTxt",
+                      "fill": "#666666",
+                      "content": "Aplicaciones Web",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AyDiX",
+                  "name": "Filter ML",
+                  "cornerRadius": 100,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "py2vj",
+                      "name": "filterMLTxt",
+                      "fill": "#666666",
+                      "content": "Machine Learning",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AT6Uf",
+                  "name": "Filter Mobile",
+                  "cornerRadius": 100,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6YIim",
+                      "name": "filterMobileTxt",
+                      "fill": "#666666",
+                      "content": "Apps Móviles",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pIdkZ",
+                  "name": "Filter Desktop",
+                  "cornerRadius": 100,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kxNmf",
+                      "name": "filterDesktopTxt",
+                      "fill": "#666666",
+                      "content": "Escritorio",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "9yTJN",
+                  "name": "Filter Auto",
+                  "cornerRadius": 100,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FFRYb",
+                      "name": "filterAutoTxt",
+                      "fill": "#666666",
+                      "content": "Automatización",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UkWGU",
+              "name": "Projects Row 1",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OUSLj",
+                  "name": "Project Card 1",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Ti6qJ",
+                      "name": "Card1 Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "zulfugarkarimov",
+                        "link": "https://unsplash.com/@zulfugarkarimov",
+                        "author": "Zulfugar Karimov"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1762330464687-03310de26057?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQwNDF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mxc1G",
+                      "name": "Card1 Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BbUhx",
+                          "name": "title1",
+                          "fill": "#272822",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "FinFlow: Plataforma de Gestión Financiera",
+                          "lineHeight": 1.3,
+                          "fontFamily": "Rowdies",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "09aDJ",
+                          "name": "desc1",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Sistema de conciliación bancaria automática y reportes financieros en tiempo real para PYMEs.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Fjea2",
+                  "name": "Project Card 2",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "sHDpf",
+                      "name": "Card2 Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "helloelba",
+                        "link": "https://unsplash.com/@helloelba",
+                        "author": "Elba Sindoni"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1626196607758-266f19558d3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQwNDF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xbZlc",
+                      "name": "Card2 Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "0Xvc3",
+                          "name": "title2",
+                          "fill": "#272822",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "TaskMaster: Gestión de Proyectos Ágiles",
+                          "lineHeight": 1.3,
+                          "fontFamily": "Rowdies",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uquFE",
+                          "name": "desc2",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Aplicación web para equipos que trabajan con metodologías ágiles, con sprints, tableros Kanban y métricas.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KRIKE",
+                  "name": "Project Card 3",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hGucs",
+                      "name": "Card3 Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "xalfa",
+                        "link": "https://unsplash.com/@xalfa",
+                        "author": "Tonmoy Iftekhar"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1741597727884-1ecd051cadb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQwNDF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rvfAm",
+                      "name": "Card3 Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "KSrr7",
+                          "name": "title3",
+                          "fill": "#272822",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "MediConnect: Portal de Salud Digital",
+                          "lineHeight": 1.3,
+                          "fontFamily": "Rowdies",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "F5occ",
+                          "name": "desc3",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Plataforma integral para centros médicos con agendamiento de citas, historial clínico y telemedicina.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eesPz",
+              "name": "Projects Row 2",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mNgay",
+                  "name": "Project Card 4",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KsMVm",
+                      "name": "Card4 Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "le_y0u",
+                        "link": "https://unsplash.com/@le_y0u",
+                        "author": "You Le"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1768719951974-57763dca6411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQwNDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Oq7sJ",
+                      "name": "Card4 Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ShK2L",
+                          "name": "title4",
+                          "fill": "#272822",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "BuildTrack: Seguimiento de Obras",
+                          "lineHeight": 1.3,
+                          "fontFamily": "Rowdies",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "4nNig",
+                          "name": "desc4",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Sistema de monitoreo en tiempo real para proyectos de construcción con reportes fotográficos y avance.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "5vIEp",
+                  "name": "Project Card 5",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "15RId",
+                      "name": "Card5 Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "ivan_antonenko",
+                        "link": "https://unsplash.com/@ivan_antonenko",
+                        "author": "Ivan Antonenko"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1696579179298-e3c4c16d1bf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQwNTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "aCZJ8",
+                      "name": "Card5 Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kmOAl",
+                          "name": "title5",
+                          "fill": "#272822",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "VisionAI: Clasificador de Imágenes",
+                          "lineHeight": 1.3,
+                          "fontFamily": "Rowdies",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "O7U54",
+                          "name": "desc5",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Motor de inteligencia artificial para clasificación automática de productos en líneas de producción.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PGOdN",
+                  "name": "Project Card 6",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#e0e0e0"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nlu5j",
+                      "name": "Card6 Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "joghar",
+                        "link": "https://unsplash.com/@joghar",
+                        "author": "Hardik Jogani"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1671164458343-34007812c289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQwNTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VU4wH",
+                      "name": "Card6 Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RxOOy",
+                          "name": "title6",
+                          "fill": "#272822",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "DataPulse: Analytics Dashboard",
+                          "lineHeight": 1.3,
+                          "fontFamily": "Rowdies",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ris0A",
+                          "name": "desc6",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Panel de control con visualización de datos en tiempo real y alertas inteligentes para toma de decisiones.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "meOpY",
+              "name": "CTA Container",
+              "width": "fill_container",
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NWuJg",
+                  "name": "Ver Mas Btn",
+                  "fill": "#00000000",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#555555"
+                  },
+                  "padding": [
+                    14,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pbiXB",
+                      "name": "ctaBtnTxt",
+                      "fill": "#888888",
+                      "content": "Ver todos los proyectos →",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1.5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "7vxVb",
+          "name": "Section: Blog",
+          "width": "fill_container",
+          "fill": "#272822",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            100,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "QS0IA",
+              "name": "Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MdFPJ",
+                  "name": "blogLabel",
+                  "fill": "#f18661",
+                  "content": "Blog",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "xvaAj",
+                  "name": "blogTitle",
+                  "fill": "#ffffff",
+                  "content": "INSIGHTS DESDE EL LAB.",
+                  "textAlign": "center",
+                  "fontFamily": "Changa One",
+                  "fontSize": 76,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "tpi7l",
+                  "name": "blogSubtitle",
+                  "fill": "#999999",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Compartimos aprendizajes sobre desarrollo de software, inteligencia artificial y construcción de productos.",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dSc8G",
+              "name": "Blog Grid",
+              "width": "fill_container",
+              "height": 420,
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "2xrLa",
+                  "name": "Featured Post",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#1a1a1a",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "o5gFg",
+                      "name": "Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "enchantedtools",
+                        "link": "https://unsplash.com/@enchantedtools",
+                        "author": "Enchanted Tools"
+                      },
+                      "width": "fill_container",
+                      "height": 220,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1768323102310-965beb4849ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQ2NDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dhnGA",
+                      "name": "Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "sTbfN",
+                          "name": "featuredTag",
+                          "fill": "#f1866625",
+                          "cornerRadius": 100,
+                          "padding": [
+                            4,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "RhYoE",
+                              "name": "featuredTagText",
+                              "fill": "#f18661",
+                              "content": "Inteligencia Artificial",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "jo2tF",
+                          "name": "featuredTitle",
+                          "fill": "#ffffff",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Cómo Construimos un Agente de IA para Coaching en Tiempo Real",
+                          "lineHeight": 1.3,
+                          "fontFamily": "Rowdies",
+                          "fontSize": 20,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HPg4K",
+                          "name": "featuredDesc",
+                          "fill": "#b0b0b0",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "iEjeB",
+                          "name": "featuredMeta",
+                          "fill": "#888888",
+                          "content": "15 min lectura • Enero 2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IZghX",
+                  "name": "Small Posts",
+                  "width": 360,
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lAcTB",
+                      "name": "Post 2",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#1a1a1a",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#333333"
+                      },
+                      "gap": 16,
+                      "padding": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ApK3W",
+                          "name": "Thumbnail",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "agforl24",
+                            "link": "https://unsplash.com/@agforl24",
+                            "author": "Tai Bui"
+                          },
+                          "width": 100,
+                          "height": 100,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1634838083208-ce7a36701fe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQ2NDN8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 8
+                        },
+                        {
+                          "type": "frame",
+                          "id": "q8vNF",
+                          "name": "Content",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "jFFr7",
+                              "name": "post2Tag",
+                              "fill": "#4ade8020",
+                              "cornerRadius": 100,
+                              "padding": [
+                                4,
+                                8
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "zONw3",
+                                  "name": "post2TagText",
+                                  "fill": "#4ade80",
+                                  "content": "Arquitectura",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "1Z3NE",
+                              "name": "post2Title",
+                              "fill": "#ffffff",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Monolito vs Microservicios: Cuándo Usar Cada Uno",
+                              "lineHeight": 1.3,
+                              "fontFamily": "Rowdies",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "gLCwf",
+                              "name": "post2Meta",
+                              "fill": "#888888",
+                              "content": "8 min • Diciembre 2025",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xcXpF",
+                      "name": "Post 3",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#1a1a1a",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#333333"
+                      },
+                      "gap": 16,
+                      "padding": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "3bIJL",
+                          "name": "Thumbnail",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "silverkblack",
+                            "link": "https://unsplash.com/@silverkblack",
+                            "author": "Vitaly Gariev"
+                          },
+                          "width": 100,
+                          "height": 100,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1758598497528-d8d9b3f22894?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxMzQ2NDN8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 8
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fs33P",
+                          "name": "Content",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "LvKa6",
+                              "name": "post3Tag",
+                              "fill": "#a78bfa20",
+                              "cornerRadius": 100,
+                              "padding": [
+                                4,
+                                8
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "vkvOp",
+                                  "name": "post3TagText",
+                                  "fill": "#a78bfa",
+                                  "content": "Venture Building",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "5xdIs",
+                              "name": "post3Title",
+                              "fill": "#ffffff",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "3 MVPs en 6 Meses: Lecciones Aprendidas",
+                              "lineHeight": 1.3,
+                              "fontFamily": "Rowdies",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "fIZ3V",
+                              "name": "post3Meta",
+                              "fill": "#888888",
+                              "content": "12 min • Noviembre 2025",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pzVxm",
+              "name": "CTA",
+              "width": "fill_container",
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "J3iKu",
+                  "name": "blogCTABtn",
+                  "fill": "#00000000",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#555555"
+                  },
+                  "padding": [
+                    14,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PQHih",
+                      "name": "blogCTAText",
+                      "fill": "#888888",
+                      "content": "Explorar el blog →",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1.5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "M0kfI",
+          "name": "Section: FAQ",
+          "width": "fill_container",
+          "fill": "#f5f5f5",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            100,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "L1tcS",
+              "name": "Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IFxux",
+                  "name": "faqLabel",
+                  "fill": "#f18661",
+                  "content": "FAQ",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "z08SO",
+                  "name": "faqTitle",
+                  "fill": "#272822",
+                  "content": "PREGUNTAS FRECUENTES.",
+                  "textAlign": "center",
+                  "fontFamily": "Changa One",
+                  "fontSize": 76,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "FncFm",
+                  "name": "faqSubtitle",
+                  "fill": "#555555",
+                  "content": "Resolvemos las dudas más comunes sobre trabajar con nosotros.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "u2MJQ",
+              "name": "FAQ Grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bQyQN",
+                  "name": "Column 1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jJDew",
+                      "name": "FAQ 1",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#e0e0e0"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "UQzMM",
+                          "name": "faq1Q",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "if9vW",
+                              "name": "faq1QText",
+                              "fill": "#272822",
+                              "content": "¿Qué es el modelo híbrido de Allia?",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "2MFLO",
+                              "name": "faq1Icon",
+                              "fill": "#f18661",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "MxZUY",
+                          "name": "faq1A",
+                          "fill": "#555555",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Combinamos servicios tradicionales de agencia (Motor A - 70% proyectos) con un programa selectivo de financiamiento (Motor B - 30% proyectos). Esto nos permite trabajar con clientes con presupuesto completo y también con startups validadas sin liquidez inmediata.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vBY5u",
+                      "name": "FAQ 2",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#e0e0e0"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "EGzlY",
+                          "name": "faq2Q",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ET3cs",
+                              "name": "faq2QText",
+                              "fill": "#272822",
+                              "content": "¿Trabajan gratis o por equity?",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "aqsPD",
+                              "name": "faq2Icon",
+                              "fill": "#f18661",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "sksH3",
+                          "name": "faq2A",
+                          "fill": "#555555",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "No. Cobramos precio de mercado completo siempre. No somos un venture studio, fondo de inversión ni aceleradora. Nuestra contribución es capacidad técnica de ejecución, no dinero. Somos inversores de código, no de capital.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OIQv0",
+                      "name": "FAQ 3",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#e0e0e0"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dZq5g",
+                          "name": "faq3Q",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "eSny0",
+                              "name": "faq3QText",
+                              "fill": "#272822",
+                              "content": "¿Qué es el programa de financiamiento?",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "E8FM3",
+                              "name": "faq3Icon",
+                              "fill": "#f18661",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "JShNW",
+                          "name": "faq3A",
+                          "fill": "#555555",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Para startups con validación real (cartas de intención, preventas, contratos) pero sin liquidez. Ofrecemos enganche menor (10-30%), período de gracia (2-6 meses) y cuotas mensuales. Retenemos propiedad del código hasta pago completo.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "srAHB",
+                      "name": "FAQ 4",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#e0e0e0"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "cZ1Rg",
+                          "name": "faq4Q",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lKyJh",
+                              "name": "faq4QText",
+                              "fill": "#272822",
+                              "content": "¿Qué pasa si no puedo completar los pagos?",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Knbkw",
+                              "name": "faq4Icon",
+                              "fill": "#f18661",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "fk7Nt",
+                          "name": "faq4A",
+                          "fill": "#555555",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Allia recupera control total del código y puede continuar desarrollando, vender a otro cliente, o reproponer la tecnología. Durante el período de pago tienes licencia revocable de uso para operar tu negocio.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "t5pRY",
+                  "name": "Column 2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "2RA81",
+                      "name": "FAQ 5",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#e0e0e0"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "mO88H",
+                          "name": "faq5Q",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "QXby7",
+                              "name": "faq5QText",
+                              "fill": "#272822",
+                              "content": "¿Cómo es el pago en Motor A (Agencia)?",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Kbkh4",
+                              "name": "faq5Icon",
+                              "fill": "#f18661",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "QWSG3",
+                          "name": "faq5A",
+                          "fill": "#555555",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Pago directo y tradicional. Enganche significativo (30-50%) al inicio, seguido de pagos por hitos o pago final al completar. Sin períodos de gracia ni financiamiento extendido. Transferencia de propiedad al completar pago.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "K4bqx",
+                      "name": "FAQ 6",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#e0e0e0"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "0gBRv",
+                          "name": "faq6Q",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "HRXnO",
+                              "name": "faq6QText",
+                              "fill": "#272822",
+                              "content": "¿Qué perfil necesito para Motor B?",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "cMghs",
+                              "name": "faq6Icon",
+                              "fill": "#f18661",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "twdD9",
+                          "name": "faq6A",
+                          "fill": "#555555",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Startups con validación real de mercado (no solo ideas), fundadores con 5-10+ años de expertise en su industria, y validación mediante cartas de intención, listas de espera, preventas o contratos condicionados.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f9lBz",
+                      "name": "FAQ 7",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#e0e0e0"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "uarAb",
+                          "name": "faq7Q",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "gaHPy",
+                              "name": "faq7QText",
+                              "fill": "#272822",
+                              "content": "¿Qué tecnologías utilizan?",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "8kOpr",
+                              "name": "faq7Icon",
+                              "fill": "#f18661",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "vf18q",
+                          "name": "faq7A",
+                          "fill": "#555555",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Somos agnósticos tecnológicamente. Especialidades: React/Next.js, Node.js/Python, PostgreSQL/MongoDB, AWS/GCP, y especialmente IA con Claude API, OpenAI y modelos open source.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FTzUy",
+                      "name": "FAQ 8",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#e0e0e0"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "qDiB4",
+                          "name": "faq8Q",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "4n5Ea",
+                              "name": "faq8QText",
+                              "fill": "#272822",
+                              "content": "¿Ofrecen soporte post-lanzamiento?",
+                              "fontFamily": "Rowdies",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "BN0pJ",
+                              "name": "faq8Icon",
+                              "fill": "#f18661",
+                              "content": "+",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "fhIHG",
+                          "name": "faq8A",
+                          "fill": "#555555",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Sí. Incluimos 30 días de soporte correctivo después del deploy. Luego ofrecemos planes de mantenimiento mensual con actualizaciones de seguridad, monitoreo 24/7 y mejoras continuas.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "CCUWS",
+          "name": "Section: CTA",
+          "width": "fill_container",
+          "fill": "#272822",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            120,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "IOkgt",
+              "name": "ctaTitle",
+              "fill": "#ffffff",
+              "content": "¿LISTO PARA COMENZAR?",
+              "lineHeight": 1.05,
+              "textAlign": "center",
+              "fontFamily": "Changa One",
+              "fontSize": 70,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "sVdxj",
+              "name": "ctaSubtitle",
+              "fill": "#b0b0b0",
+              "textGrowth": "fixed-width",
+              "width": 600,
+              "content": "Agenda una llamada de 30 minutos. Sin compromiso, sin pitch de ventas. Solo una conversación sobre tu proyecto.",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "LC50t",
+              "name": "ctaBtn",
+              "fill": "#ffffff",
+              "cornerRadius": 8,
+              "padding": [
+                16,
+                36
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IUkMO",
+                  "name": "ctaBtnText",
+                  "fill": "#272822",
+                  "content": "Agenda una llamada gratis →",
+                  "fontFamily": "Rowdies",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.5
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "1kRVH",
+              "name": "ctaEmail",
+              "fill": "#888888",
+              "content": "O escríbenos directamente a hola@allia.dev",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iPX1F",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "#1a1a1a",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            80,
+            80,
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "sQUnP",
+              "name": "Footer Main",
+              "width": "fill_container",
+              "gap": 80,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8ErUe",
+                  "name": "Brand",
+                  "width": 450,
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rU9bU",
+                      "name": "footerLogo",
+                      "fill": "#ffffff",
+                      "content": "Construye\ncon\nnosotros.",
+                      "lineHeight": 1,
+                      "fontFamily": "Changa One",
+                      "fontSize": 72,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Aegci",
+                      "name": "footerSocial",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NPE9Z",
+                          "name": "socialLi",
+                          "fill": "#777777",
+                          "content": "LINKEDIN",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "r3T62",
+                          "name": "socialGh",
+                          "fill": "#777777",
+                          "content": "GITHUB",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "0ICcH",
+                          "name": "socialX",
+                          "fill": "#777777",
+                          "content": "TWITTER",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500",
+                          "letterSpacing": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "q77P4",
+                  "name": "Servicios",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "SpPyk",
+                      "name": "lineSrv",
+                      "width": 40,
+                      "height": 2,
+                      "fill": "#f18661"
+                    },
+                    {
+                      "type": "text",
+                      "id": "O4cjn",
+                      "name": "footerServTitle",
+                      "fill": "#ffffff",
+                      "content": "SERVICIOS",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "wMNC4",
+                      "name": "footerServ1",
+                      "fill": "#999999",
+                      "content": "Desarrollo Web",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "B0NV7",
+                      "name": "footerServ2",
+                      "fill": "#999999",
+                      "content": "Desarrollo Mobile",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wscgd",
+                      "name": "footerServ3",
+                      "fill": "#999999",
+                      "content": "Inteligencia Artificial",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MSZQS",
+                      "name": "footerServ4",
+                      "fill": "#999999",
+                      "content": "Automatizaciones",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hSYtb",
+                      "name": "footerServ5",
+                      "fill": "#999999",
+                      "content": "Sistemas Empresariales",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Nm2Wt",
+                  "name": "Empresa",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "CVCi2",
+                      "name": "lineEmp",
+                      "width": 40,
+                      "height": 2,
+                      "fill": "#f18661"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xcyJB",
+                      "name": "footerEmpTitle",
+                      "fill": "#ffffff",
+                      "content": "EMPRESA",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "WTlgT",
+                      "name": "footerEmp1",
+                      "fill": "#999999",
+                      "content": "Nuestro Proceso",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YviPN",
+                      "name": "footerEmp2",
+                      "fill": "#999999",
+                      "content": "Proyectos",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NSd66",
+                      "name": "footerEmp3",
+                      "fill": "#999999",
+                      "content": "Blog",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "v42Ac",
+                      "name": "footerEmp4",
+                      "fill": "#999999",
+                      "content": "Preguntas Frecuentes",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wLNTh",
+                  "name": "Contacto",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JuWZE",
+                      "name": "lineCon",
+                      "width": 40,
+                      "height": 2,
+                      "fill": "#f18661"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fMJKK",
+                      "name": "footerConTitle",
+                      "fill": "#ffffff",
+                      "content": "CONTACTO",
+                      "fontFamily": "Rowdies",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "syA1n",
+                      "name": "footerCon1",
+                      "fill": "#999999",
+                      "content": "hola@allia.dev",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "O1oMe",
+                      "name": "footerCon2",
+                      "fill": "#999999",
+                      "content": "Lima, Perú",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mYR5f",
+                      "name": "footerCon3",
+                      "fill": "#f18661",
+                      "content": "Agendar llamada →",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YT9KY",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "stroke": {
+                "align": "inside",
+                "thickness": {
+                  "top": 1
+                },
+                "fill": "#2a2a2a"
+              },
+              "padding": [
+                32,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "R3i2l",
+                  "name": "footerCopy",
+                  "fill": "#666666",
+                  "content": "© 2026 ALLIA STUDIO",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "VW0mx",
+                  "name": "policyLink",
+                  "fill": "#666666",
+                  "content": "POLÍTICA DE PRIVACIDAD",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "WC6hs",
+                  "name": "emailLink",
+                  "fill": "#666666",
+                  "content": "HOLA@ALLIA.DEV",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "themes": {
+    "Mode": [
+      "Light",
+      "Dark"
+    ]
+  },
+  "variables": {
+    "--sidebar": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E7E8E5"
+        },
+        {
+          "value": "#18181b",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#18181b"
+        },
+        {
+          "value": "#18181b",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#fafafa"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#ffffff1a",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2a2a30",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-accent-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#18181b"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-ring": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#71717a"
+        },
+        {
+          "value": "#71717a",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--background": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--card": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#1A1A1A",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--card-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--popover": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#1A1A1A",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--popover-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FF8400"
+        },
+        {
+          "value": "#FF8400",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--secondary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E7E8E5"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--secondary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--muted": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--muted-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#B8B9B6",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--accent-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#F2F3F0",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--destructive": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#D93C15"
+        },
+        {
+          "value": "#FF5C33",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--input": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--ring": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#666666",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "--black": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "--font-primary": {
+      "type": "string",
+      "value": "JetBrains Mono"
+    },
+    "--font-secondary": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "--radius-none": {
+      "type": "number",
+      "value": 0
+    },
+    "--radius-pill": {
+      "type": "number",
+      "value": 999
+    },
+    "--color-success": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#DFE6E1"
+        },
+        {
+          "value": "#222924",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-success-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#004D1A"
+        },
+        {
+          "value": "#B6FFCE",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-warning": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E9E3D8"
+        },
+        {
+          "value": "#291C0F",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-warning-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#804200"
+        },
+        {
+          "value": "#FF8400",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-error": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E5DCDA"
+        },
+        {
+          "value": "#24100B",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-error-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#8C1C00"
+        },
+        {
+          "value": "#FF5C33",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-info": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#DFDFE6"
+        },
+        {
+          "value": "#222229",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-info-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#000066"
+        },
+        {
+          "value": "#B2B2FF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--radius-m": {
+      "type": "number",
+      "value": 16
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__filesystem__directory_tree",
+      "mcp__filesystem__list_directory",
+      "Bash(npm run dev:*)",
+      "Bash(npx astro add tailwind -y)",
+      "mcp__shadcn__get_project_registries",
+      "Bash(npm install:*)",
+      "Bash(npx astro add sitemap -y)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\ferna\\\\OneDrive\\\\Documentos\\\\Programming\\\\Allia-landingpage\\\\src\" -Recurse -Include \"*.ts\",\"*.js\",\"*.astro\")",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(dir:*)",
+      "Bash(npm run build:*)",
+      "mcp__filesystem__read_multiple_files",
+      "Bash(del tmpclaude-*)",
+      "Bash(del \"public\\\\allia-logo-blanco.png\")",
+      "Bash(powershell -Command:*)",
+      "Skill(code-reviewer)",
+      "Bash(python:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm ls:*)",
+      "Bash(node scripts/optimize-images.mjs:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:tailwind-animations.com)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "context7",
+    "filesystem",
+    "shadcn"
+  ],
+  "enableAllProjectMcpServers": true
+}

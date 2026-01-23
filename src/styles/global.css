@@ -109,7 +109,27 @@ body {
   width: 100%;
 }
 
+.link-underline:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 /* Font utility classes */
 .font-title {
   font-family: var(--font-title);
+}
+
+/* ================================
+   Accessibility: Reduced Motion
+   ================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

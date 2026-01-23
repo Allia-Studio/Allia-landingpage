@@ -56,9 +56,13 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
    */
   function delay(ms) {
     return new Promise(resolve => {
-      const timeoutId = setTimeout(() => resolve(true), ms);
+      let checkAbort;
+      const timeoutId = setTimeout(() => {
+        clearInterval(checkAbort); // Clear interval when timeout completes
+        resolve(true);
+      }, ms);
       // Check periodically if animation was aborted
-      const checkAbort = setInterval(() => {
+      checkAbort = setInterval(() => {
         if (animationAborted) {
           clearTimeout(timeoutId);
           clearInterval(checkAbort);

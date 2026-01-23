@@ -61,7 +61,7 @@ export const CALCOM = {
   link: 'carlos-alonso-flores-panduro-zejpqc/30min',
   namespace: '30min',
   config: { layout: 'column_view' } satisfies CalComConfig,
-  brandColor: '#ffd43b',
+  brandColor: '#f18661',
 } as const;
 
 // ============================================
