@@ -1,21 +1,21 @@
 ---
 name: typescript
 description: >
-  Patrones estrictos de TypeScript y mejores prácticas.
-  Usar cuando: Se definan tipos, interfaces, genéricos, const maps, type guards, o se elimine any.
-license: MIT
+  TypeScript strict patterns and best practices.
+  Trigger: When implementing or refactoring TypeScript in .ts/.tsx (types, interfaces, generics, const maps, type guards, removing any, tightening unknown).
+license: Apache-2.0
 metadata:
   author: allia-studio
   version: "1.0"
   scope: [root]
-  auto_invoke: "Al definir tipos o interfaces"
+  auto_invoke: "Writing TypeScript types/interfaces"
 allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
-## Const Types (OBLIGATORIO)
+## Const Types Pattern (REQUIRED)
 
 ```typescript
-// ✅ SIEMPRE: Crear objeto const primero, luego extraer el tipo
+// ✅ ALWAYS: Create const object first, then extract type
 const STATUS = {
   ACTIVE: "active",
   INACTIVE: "inactive",
@@ -23,63 +23,75 @@ const STATUS = {
 } as const;
 
 type Status = (typeof STATUS)[keyof typeof STATUS];
-// Resultado: "active" | "inactive" | "pending"
 
-// ❌ NUNCA: Union types directos
+// ❌ NEVER: Direct union types
 type Status = "active" | "inactive" | "pending";
 ```
 
-**¿Por qué?** Centraliza el valor y el tipo, disponible en runtime, mejor autocompletado, refactoring más fácil.
+**Why?** Single source of truth, runtime values, autocomplete, easier refactoring.
 
-## Interfaces sin Anidamiento (OBLIGATORIO)
+## Flat Interfaces (REQUIRED)
 
 ```typescript
-// ✅ SIEMPRE: Un nivel de profundidad, objetos anidados → interface separada
+// ✅ ALWAYS: One level depth, nested objects → dedicated interface
 interface UserAddress {
   street: string;
   city: string;
-  postalCode: string;
 }
 
 interface User {
   id: string;
   name: string;
-  address: UserAddress;  // Referencia, no inline
+  address: UserAddress;  // Reference, not inline
 }
 
-// ✅ Extensión para variantes
 interface Admin extends User {
   permissions: string[];
 }
 
-// ❌ NUNCA: Objetos anidados inline
+// ❌ NEVER: Inline nested objects
 interface User {
-  address: { street: string; city: string };  // NO
+  address: { street: string; city: string };  // NO!
 }
 ```
 
-## Nunca Usar `any`
+## Never Use `any`
 
 ```typescript
-// ✅ Usar unknown para tipos desconocidos
-function parseData(input: unknown): User {
+// ✅ Use unknown for truly unknown types
+function parse(input: unknown): User {
   if (isUser(input)) return input;
-  throw new Error("Invalid data");
+  throw new Error("Invalid input");
 }
 
-// ✅ Usar genéricos para tipos flexibles
+// ✅ Use generics for flexible types
 function first<T>(arr: T[]): T | undefined {
   return arr[0];
 }
 
-// ❌ NUNCA
-function parseData(input: any): any { }
+// ❌ NEVER
+function parse(input: any): any { }
+```
+
+## Utility Types
+
+```typescript
+Pick<User, "id" | "name">     // Select fields
+Omit<User, "id">              // Exclude fields
+Partial<User>                 // All optional
+Required<User>                // All required
+Readonly<User>                // All readonly
+Record<string, User>          // Object type
+Extract<Union, "a" | "b">     // Extract from union
+Exclude<Union, "a">           // Exclude from union
+NonNullable<T | null>         // Remove null/undefined
+ReturnType<typeof fn>         // Function return type
+Parameters<typeof fn>         // Function params tuple
 ```
 
 ## Type Guards
 
 ```typescript
-// ✅ Type guard con type predicate
 function isUser(value: unknown): value is User {
   return (
     typeof value === "object" &&
@@ -88,113 +100,16 @@ function isUser(value: unknown): value is User {
     "name" in value
   );
 }
-
-// Uso
-function process(data: unknown) {
-  if (isUser(data)) {
-    console.log(data.name);  // TypeScript sabe que es User
-  }
-}
 ```
 
-## Discriminated Unions
+## Import Types
 
 ```typescript
-// ✅ Para estados o variantes con propiedades diferentes
-interface LoadingState {
-  type: "loading";
-}
-
-interface SuccessState<T> {
-  type: "success";
-  data: T;
-}
-
-interface ErrorState {
-  type: "error";
-  message: string;
-}
-
-type AsyncState<T> = LoadingState | SuccessState<T> | ErrorState;
-
-// Uso: TypeScript infiere el tipo correcto
-function render(state: AsyncState<User[]>) {
-  switch (state.type) {
-    case "loading":
-      return <Spinner />;
-    case "success":
-      return <List data={state.data} />;  // data es User[]
-    case "error":
-      return <Error message={state.message} />;
-  }
-}
+import type { User } from "./types";
+import { createUser, type Config } from "./utils";
 ```
 
-## Utility Types
+## Resources
 
-```typescript
-// Selección y omisión
-Pick<User, "id" | "name">     // Solo id y name
-Omit<User, "id">              // Todo excepto id
-
-// Opcionalidad
-Partial<User>                 // Todos opcionales
-Required<User>                // Todos requeridos
-
-// Inmutabilidad
-Readonly<User>                // Solo lectura
-
-// Objetos dinámicos
-Record<string, User>          // { [key: string]: User }
-
-// Unions
-Extract<Status, "active" | "pending">  // Solo esos valores
-Exclude<Status, "inactive">            // Todos excepto ese
-
-// Nullability
-NonNullable<string | null>    // string
-
-// Funciones
-ReturnType<typeof myFunction>   // Tipo de retorno
-Parameters<typeof myFunction>   // Tupla de parámetros
-```
-
-## Importación de Tipos
-
-```typescript
-// ✅ SIEMPRE: Importar tipos con `type`
-import type { User, Service } from "@/lib/types";
-
-// ✅ Mezcla de valores y tipos
-import { createUser, type UserConfig } from "@/lib/users";
-```
-
-## Props en Componentes Astro
-
-```astro
----
-// ✅ Interface Props en frontmatter
-interface Props {
-  title: string;
-  description?: string;
-  variant?: "primary" | "secondary";
-}
-
-const { title, description, variant = "primary" } = Astro.props;
----
-```
-
-## Inferencia vs Anotación Explícita
-
-```typescript
-// ✅ Dejar que TypeScript infiera cuando es obvio
-const name = "Carlos";              // string
-const numbers = [1, 2, 3];          // number[]
-const double = (n: number) => n * 2;  // retorno inferido: number
-
-// ✅ Anotar cuando mejora claridad o es necesario
-const users: User[] = [];           // Array vacío necesita tipo
-function getUser(id: string): Promise<User | null> {
-  // Retorno explícito para funciones complejas
-}
-```
+- [TypeScript Docs](https://www.typescriptlang.org/docs/)
+- Related skills: `astro-5`, `tailwind-4`

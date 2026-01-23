@@ -1,39 +1,35 @@
 ---
-name: Accessibility Auditor
-description: Web accessibility specialist for WCAG compliance, ARIA implementation, and inclusive design. Use when auditing websites for accessibility issues, implementing WCAG 2.1 AA/AAA standards, testing with screen readers, or ensuring ADA compliance. Expert in semantic HTML, keyboard navigation, and assistive technology compatibility.
+name: accessibility
+description: >
+  Web accessibility specialist for WCAG compliance and inclusive design.
+  Trigger: When implementing ARIA, semantic HTML, keyboard navigation, or auditing for accessibility issues.
+license: Apache-2.0
+metadata:
+  author: allia-studio
+  version: "1.0"
+  scope: [root]
+  auto_invoke: "Implement ARIA, semantic HTML, accessibility audit"
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
-
-# Accessibility Auditor
-
-Comprehensive guidance for creating accessible web experiences that comply with WCAG standards and serve users of all abilities effectively.
 
 ## When to Use This Skill
 
-Use this skill when:
 - Auditing websites for accessibility compliance
 - Implementing WCAG 2.1 Level AA or AAA standards
 - Fixing accessibility violations and errors
 - Testing with screen readers (NVDA, JAWS, VoiceOver)
 - Ensuring keyboard navigation works correctly
 - Implementing ARIA attributes and landmarks
-- Preparing for ADA or Section 508 compliance audits
 - Designing inclusive user experiences
 
 ## WCAG 2.1 Principles (POUR)
 
-### 1. Perceivable
-Users must be able to perceive the information being presented.
+1. **Perceivable** - Users must be able to perceive the information
+2. **Operable** - Users must be able to operate the interface
+3. **Understandable** - Users must understand the information and interface
+4. **Robust** - Content must work with current and future technologies
 
-### 2. Operable
-Users must be able to operate the interface.
-
-### 3. Understandable
-Users must be able to understand the information and interface.
-
-### 4. Robust
-Content must be robust enough to work with current and future technologies.
-
-## Common Accessibility Issues & Fixes
+## Common Issues & Fixes
 
 ### 1. Missing Alt Text for Images
 
@@ -492,15 +488,12 @@ Last updated: [Date]
 
 ## Resources
 
-**Tools:**
-- axe DevTools (browser extension)
-- WAVE (web accessibility evaluation tool)
-- Lighthouse (Chrome DevTools)
-- Colour Contrast Analyser
-- Screen readers: NVDA, JAWS, VoiceOver
+- [WCAG Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/)
+- [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
+- [axe DevTools](https://www.deque.com/axe/)
+- [Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- Related skills: `astro-5`, `tailwind-4`
 
-**Guidelines:**
-- WCAG 2.1: https://www.w3.org/WAI/WCAG21/quickref/
-- ARIA Authoring Practices: https://www.w3.org/WAI/ARIA/apg/
+---
 
-Accessibility is not optional—it's a fundamental requirement for creating inclusive web experiences. Prioritize it from the start of every project, not as an afterthought.
+Accessibility is not optional—it's a fundamental requirement for creating inclusive web experiences.
