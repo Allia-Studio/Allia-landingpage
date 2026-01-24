@@ -1,0 +1,36 @@
+/**
+ * Spacing Tokens
+ * Container, layout spacing, and z-index scale
+ */
+@theme {
+  /* Container */
+  --container-max-width: 1800px;
+  --container-narrow: 1200px;
+  --container-wide: 2000px;
+
+  /* Spacing - General */
+  --spacing-container: 48px;
+  --spacing-section: 120px;
+
+  /* Spacing - Navbar */
+  --spacing-nav-height: 80px;
+  --spacing-nav-top: 36px;
+  --spacing-nav-gap: 64px;
+
+  /* Spacing - Hero */
+  --spacing-hero-title-bottom: 40px;
+  --spacing-hero-subtitle-bottom: 48px;
+
+  /* Z-index Scale */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-navbar: 1000;
+  --z-toast: 1100;
+  --z-max: 9999;
+}
