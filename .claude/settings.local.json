@@ -11,7 +11,15 @@
       "mcp__context7__query-docs",
       "Bash(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\ferna\\\\OneDrive\\\\Documentos\\\\Programming\\\\Allia-landingpage\\\\skills\\\\ui-design\\\\scripts\" -Force)",
       "mcp__filesystem__read_multiple_files",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "mcp__filesystem__read_media_file",
+      "Bash(find:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(dir:*)",
+      "Bash(copy \"c:\\\\Users\\\\ferna\\\\OneDrive\\\\Documentos\\\\Programming\\\\Allia-landingpage\\\\nuevos logos\\\\allia-color-blanco-una-letra.png\" \"c:\\\\Users\\\\ferna\\\\OneDrive\\\\Documentos\\\\Programming\\\\Allia-landingpage\\\\public\\\\favicon.png\")",
+      "Bash(copy:*)",
+      "Skill(commit)"
     ]
   },
   "enabledMcpjsonServers": [

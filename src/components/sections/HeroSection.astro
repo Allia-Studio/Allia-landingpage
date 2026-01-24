@@ -7,7 +7,7 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
 
 <Section fullHeight padded={false} class="pt-20 overflow-hidden">
   <Container class="relative z-10">
-    <h1 class="font-title text-[clamp(4rem,12vw,8.5rem)] font-normal leading-[1.02] mb-[var(--spacing-hero-title-bottom)] text-white tracking-tight">
+    <h1 class="hero-title font-title font-normal leading-[1.02] mb-[var(--spacing-hero-title-bottom)] text-[--color-white] tracking-tight">
       <!-- Fallback content for no-JS / SEO -->
       <noscript>
         <span class="block">{HERO.lines[0].text}</span>
@@ -19,24 +19,31 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
     </h1>
 
     <p
-      class="text-[clamp(1.1rem,2vw,1.35rem)] font-normal text-white mb-[var(--spacing-hero-subtitle-bottom)] leading-relaxed opacity-0 transition-all duration-700"
+      class="text-[1.35rem] font-normal text-[--color-white] mb-[var(--spacing-hero-subtitle-bottom)] leading-relaxed opacity-0 transition-all duration-700"
       id={ELEMENT_IDS.heroSubtitle}
     >
       {HERO.subtitle}
     </p>
 
-    <Button
-      href="#"
-      variant="primary"
-      size="md"
-      class="opacity-0 translate-y-4"
-      id={ELEMENT_IDS.heroCta}
-      data-cal-link={CALCOM.link}
-      data-cal-namespace={CALCOM.namespace}
-      data-cal-config={JSON.stringify(CALCOM.config)}
-    >
-      {HERO.ctaText}
-    </Button>
+    <div class="flex flex-wrap gap-4 items-center opacity-0 translate-y-4" id={ELEMENT_IDS.heroCta}>
+      <Button
+        href="#"
+        variant="primary"
+        size="md"
+        data-cal-link={CALCOM.link}
+        data-cal-namespace={CALCOM.namespace}
+        data-cal-config={JSON.stringify(CALCOM.config)}
+      >
+        {HERO.ctaPrimary}
+      </Button>
+      <Button
+        href="#proyectos"
+        variant="ghost"
+        size="md"
+      >
+        {HERO.ctaSecondary}
+      </Button>
+    </div>
   </Container>
 </Section>
 
@@ -173,6 +180,16 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
 </script>
 
 <style>
+  /* Hero title size */
+  .hero-title {
+    font-size: var(--text-hero);
+    text-decoration: none;
+  }
+
+  .hero-title span {
+    text-decoration: none;
+  }
+
   /* Animation transition for CTA button appear effect */
   #hero-cta {
     transition: opacity var(--transition-slow), transform var(--transition-slow);

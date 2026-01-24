@@ -11,7 +11,7 @@ Desktop.ini
 # Editor Files
 .vscode/
 .idea/
-# .claude/
+.claude/
 .mcp.json
 *.sublime-project
 *.sublime-workspace
@@ -81,3 +81,4 @@ docs/
 AVANCES_Y_CAMBIOS.md
 context/
 .astro/
+antiguo/

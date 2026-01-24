@@ -1,0 +1,62 @@
+---
+/**
+ * Accordion.astro - FAQ accordion item
+ * Expandible con animación suave
+ */
+import type { FAQItem } from '../../lib/types';
+import IconPlus from '../icons/IconPlus.astro';
+
+interface Props {
+  item: FAQItem;
+  class?: string;
+}
+
+const { item, class: className = '' } = Astro.props;
+---
+
+<details
+  class:list={[
+    'group border-b border-[--color-border] last:border-b-0',
+    className,
+  ]}
+>
+  <summary
+    class="flex items-center justify-between gap-4 py-5 cursor-pointer list-none select-none"
+  >
+    <h3 class="font-medium text-lg text-[--color-white] group-hover:text-[--color-accent] transition-colors pr-4">
+      {item.question}
+    </h3>
+    <div class="flex-shrink-0 text-[--color-gray] group-open:text-[--color-accent] transition-transform group-open:rotate-45">
+      <IconPlus size={20} />
+    </div>
+  </summary>
+
+  <div class="pb-5 pr-10">
+    <p class="text-[--color-gray] leading-relaxed">
+      {item.answer}
+    </p>
+  </div>
+</details>
+
+<style>
+  /* Remove default marker */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Smooth animation for open/close */
+  details[open] summary ~ * {
+    animation: accordionOpen 0.3s ease-out;
+  }
+
+  @keyframes accordionOpen {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

@@ -1,0 +1,97 @@
+/**
+ * Custom Utility Classes
+ * Project-specific utilities beyond Tailwind defaults
+ */
+
+/* Font utilities */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-title {
+  font-family: var(--font-title);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-normal);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+.link-underline:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Text gradient utility */
+.text-gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section backgrounds */
+.bg-section-dark {
+  background-color: var(--color-bg-dark);
+}
+
+.bg-section-light {
+  background-color: var(--color-bg);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: transform var(--transition-normal);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* Scrollbar styling */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gray-dark) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-dark);
+  border-radius: var(--radius-pill);
+}
+
+/* Focus ring utility */
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

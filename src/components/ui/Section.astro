@@ -29,8 +29,7 @@ const bgClasses: Record<string, string> = {
 
 const baseClasses = [
   'relative',
-  'px-[var(--spacing-container-mobile)]',
-  'md:px-[var(--spacing-container)]',
+  'px-[var(--spacing-container)]',
   bgClasses[background]
 ];
 
@@ -39,7 +38,7 @@ if (fullHeight) {
 }
 
 if (padded) {
-  baseClasses.push('py-16', 'md:py-24');
+  baseClasses.push('py-24');
 }
 ---
 

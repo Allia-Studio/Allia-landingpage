@@ -15,7 +15,9 @@
   /* Spacing - Navbar */
   --spacing-nav-height: 80px;
   --spacing-nav-top: 36px;
-  --spacing-nav-gap: 64px;
+  --spacing-nav-gap: 80px;
+  --spacing-nav-padding: 16px;
+  --spacing-nav-padding-scrolled: 8px;
 
   /* Spacing - Hero */
   --spacing-hero-title-bottom: 40px;

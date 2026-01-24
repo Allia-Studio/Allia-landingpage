@@ -1,0 +1,60 @@
+---
+/**
+ * SectionHeader.astro - Componente reutilizable para headers de sección
+ * Incluye label (opcional), título y subtítulo
+ */
+import type { SectionHeaderProps } from '../../lib/types';
+
+interface Props extends SectionHeaderProps {}
+
+const {
+  label,
+  title,
+  subtitle,
+  centered = false,
+  labelColor = 'accent',
+  class: className = '',
+} = Astro.props;
+
+const labelColorClasses = {
+  accent: 'text-[--color-accent]',
+  white: 'text-[--color-white]',
+};
+---
+
+<header
+  class:list={[
+    'mb-16',
+    { 'text-center': centered },
+    className,
+  ]}
+>
+  {label && (
+    <span
+      class:list={[
+        'inline-block text-base font-medium uppercase tracking-wider mb-4',
+        labelColorClasses[labelColor],
+      ]}
+    >
+      {label}
+    </span>
+  )}
+
+  <h2
+    class="font-title text-6xl uppercase leading-tight mb-6"
+  >
+    {title}
+  </h2>
+
+  {subtitle && (
+    <p
+      class:list={[
+        'text-xl text-[--color-gray] leading-relaxed',
+        { 'max-w-2xl': !centered },
+        { 'max-w-3xl mx-auto': centered },
+      ]}
+    >
+      {subtitle}
+    </p>
+  )}
+</header>

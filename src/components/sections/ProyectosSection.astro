@@ -1,0 +1,135 @@
+---
+/**
+ * ProyectosSection.astro - Portfolio con filtros
+ * Fondo oscuro, grid de proyectos con filtrado por categoría
+ */
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+import ProjectCard from '../ui/ProjectCard.astro';
+import { SECTION_HEADERS, PROJECTS, PROJECT_CATEGORIES } from '../../lib/constants';
+---
+
+<Section id="proyectos" background="dark">
+  <Container>
+    <SectionHeader {...SECTION_HEADERS.proyectos} />
+
+    <!-- Category Filters -->
+    <div class="flex flex-wrap gap-3 mb-10" role="tablist" aria-label="Filtrar proyectos por categoría">
+      {PROJECT_CATEGORIES.map((category, index) => (
+        <button
+          type="button"
+          role="tab"
+          aria-selected={index === 0 ? 'true' : 'false'}
+          data-filter={category.id}
+          class:list={[
+            'px-5 py-2 rounded-full text-sm font-medium transition-all',
+            'border border-[--color-border]',
+            'hover:border-[--color-accent] hover:text-[--color-accent]',
+            'focus-visible:outline-2 focus-visible:outline-[--color-accent] focus-visible:outline-offset-2',
+            index === 0 ? 'bg-[--color-accent] border-[--color-accent] text-[--color-white]' : 'text-[--color-gray]',
+          ]}
+        >
+          {category.label}
+        </button>
+      ))}
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-3 gap-8" id="projects-grid">
+      {PROJECTS.map((project, index) => (
+        <ProjectCard
+          project={project}
+          class="project-card animate-fade-in"
+          style={`--card-delay: ${index * 100}ms`}
+        />
+      ))}
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .project-card {
+    opacity: 0;
+  }
+
+  .project-card.is-visible {
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: var(--card-delay, 0ms);
+  }
+
+  .project-card.is-hidden {
+    display: none;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  // Filter functionality
+  const filterButtons = document.querySelectorAll('[data-filter]');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+
+      // Update active button state
+      filterButtons.forEach((btn) => {
+        btn.classList.remove('bg-[--color-accent]', 'border-[--color-accent]', 'text-[--color-white]');
+        btn.classList.add('text-[--color-gray]');
+        btn.setAttribute('aria-selected', 'false');
+      });
+
+      button.classList.add('bg-[--color-accent]', 'border-[--color-accent]', 'text-[--color-white]');
+      button.classList.remove('text-[--color-gray]');
+      button.setAttribute('aria-selected', 'true');
+
+      // Filter cards
+      projectCards.forEach((card, index) => {
+        const category = card.getAttribute('data-category');
+        const shouldShow = filter === 'todos' || category === filter;
+
+        if (shouldShow) {
+          card.classList.remove('is-hidden');
+          // Reset animation
+          card.classList.remove('is-visible');
+          card.style.setProperty('--card-delay', `${index * 50}ms`);
+          requestAnimationFrame(() => {
+            card.classList.add('is-visible');
+          });
+        } else {
+          card.classList.add('is-hidden');
+          card.classList.remove('is-visible');
+        }
+      });
+    });
+  });
+
+  // Initial animation on scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !entry.target.classList.contains('is-hidden')) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, observerOptions);
+
+  projectCards.forEach((card) => {
+    observer.observe(card);
+  });
+</script>

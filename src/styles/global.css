@@ -1,69 +1,26 @@
-@import "tailwindcss";
+/**
+ * Global Styles - Entry Point
+ * Allia Studio Landing Page
+ */
 
 /* ================================
-   Tailwind 4: Theme Configuration
+   Framework Imports
    ================================ */
-@theme {
-  /* Colors */
-  --color-bg: #272822;
-  --color-bg-dark: #1e1f1a;
-  --color-surface: #1a1a1a;
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-gray: #b8b8b8;
-  --color-accent: #f18661;
+@import "tailwindcss";
+@import "tailwind-animations";
 
-  /* Font Families */
-  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-title: 'Changa One', cursive, system-ui, sans-serif;
-  --font-display: 'Rowdies', cursive, system-ui, sans-serif;
+/* ================================
+   Design Tokens (layer: theme)
+   ================================ */
+@import "./tokens/colors.css" layer(theme);
+@import "./tokens/typography.css" layer(theme);
+@import "./tokens/spacing.css" layer(theme);
+@import "./tokens/effects.css" layer(theme);
 
-  /* Typography Scale */
-  --text-xs: 0.75rem;      /* 12px */
-  --text-sm: 0.875rem;     /* 14px */
-  --text-base: 1rem;       /* 16px */
-  --text-lg: 1.125rem;     /* 18px */
-  --text-xl: 1.25rem;      /* 20px */
-  --text-2xl: 1.5rem;      /* 24px */
-  --text-3xl: 1.875rem;    /* 30px */
-  --text-4xl: 2.25rem;     /* 36px */
-
-  /* Container */
-  --container-max-width: 1800px;
-
-  /* Spacing - General */
-  --spacing-container: 48px;
-  --spacing-container-mobile: 24px;
-
-  /* Spacing - Navbar */
-  --spacing-nav-height: 80px;
-  --spacing-nav-top: 36px;
-  --spacing-nav-gap: 64px;
-
-  /* Spacing - Hero */
-  --spacing-hero-title-bottom: 40px;
-  --spacing-hero-subtitle-bottom: 48px;
-
-  /* Z-index */
-  --z-navbar: 1000;
-  --z-navbar-toggle: 1001;
-
-  /* Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-pill: 12px;
-
-  /* Easing Functions */
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Transitions */
-  --transition-fast: 0.25s var(--ease-in-out);
-  --transition-normal: 0.35s var(--ease-in-out);
-  --transition-slow: 0.6s var(--ease-out-expo);
-}
+/* ================================
+   Custom Utilities (layer: utilities)
+   ================================ */
+@import "./utilities.css" layer(utilities);
 
 /* ================================
    Base Styles
@@ -76,48 +33,10 @@ html {
 
 body {
   font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
   background-color: var(--color-bg);
-  color: var(--color-white);
-}
-
-/* ================================
-   Utility Classes
-   ================================ */
-.font-display {
-  font-family: var(--font-display);
-}
-
-/* Link underline animation */
-.link-underline {
-  position: relative;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.link-underline::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background-color: var(--color-accent);
-  transition: width var(--transition-normal);
-}
-
-.link-underline:hover::after {
-  width: 100%;
-}
-
-.link-underline:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 4px;
-  border-radius: 2px;
-}
-
-/* Font utility classes */
-.font-title {
-  font-family: var(--font-title);
+  color: var(--color-text-primary);
 }
 
 /* ================================

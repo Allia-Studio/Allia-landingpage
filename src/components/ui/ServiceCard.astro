@@ -1,0 +1,60 @@
+---
+/**
+ * ServiceCard.astro - Card para servicios
+ * Incluye icono, título, descripción y tags de tecnología
+ */
+import type { ServiceItem } from '../../lib/types';
+import Tag from './Tag.astro';
+import IconGlobe from '../icons/IconGlobe.astro';
+import IconMobile from '../icons/IconMobile.astro';
+import IconBrain from '../icons/IconBrain.astro';
+import IconZap from '../icons/IconZap.astro';
+import IconDesktop from '../icons/IconDesktop.astro';
+import IconLightbulb from '../icons/IconLightbulb.astro';
+
+interface Props {
+  service: ServiceItem;
+  class?: string;
+}
+
+const { service, class: className = '' } = Astro.props;
+
+const iconComponents = {
+  globe: IconGlobe,
+  mobile: IconMobile,
+  brain: IconBrain,
+  zap: IconZap,
+  desktop: IconDesktop,
+  lightbulb: IconLightbulb,
+};
+
+const IconComponent = iconComponents[service.icon];
+---
+
+<article
+  class:list={[
+    'group p-8 rounded-[--radius-lg] bg-[--color-surface] border border-[--color-border]',
+    'transition-all duration-300 ease-out',
+    'hover:border-[--color-accent] hover:-translate-y-1',
+    className,
+  ]}
+>
+  <div class="flex items-start gap-4 mb-4">
+    <div class="p-3 rounded-[--radius-md] bg-[--color-bg] text-[--color-accent] group-hover:bg-[--color-accent] group-hover:text-[--color-white] transition-colors">
+      <IconComponent size={24} />
+    </div>
+    <h3 class="font-title text-2xl uppercase pt-2">
+      {service.title}
+    </h3>
+  </div>
+
+  <p class="text-[--color-gray] leading-relaxed mb-6">
+    {service.description}
+  </p>
+
+  <div class="flex flex-wrap gap-2">
+    {service.technologies.map((tech) => (
+      <Tag label={tech} variant="outline" size="sm" />
+    ))}
+  </div>
+</article>

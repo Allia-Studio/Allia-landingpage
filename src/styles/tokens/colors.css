@@ -1,0 +1,31 @@
+/**
+ * Color Tokens
+ * Brand palette and semantic colors for Allia Studio
+ */
+@theme {
+  /* Brand Colors */
+  --color-bg: #272822;
+  --color-bg-dark: #1e1f1a;
+  --color-bg-light: #3a3b35;
+  --color-surface: #1a1a1a;
+  --color-surface-elevated: #2d2e28;
+
+  /* Accent */
+  --color-accent: #f18661;
+  --color-accent-hover: #f4a080;
+  --color-accent-dark: #d66d47;
+
+  /* Neutrals */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #b8b8b8;
+  --color-gray-dark: #6b6b6b;
+  --color-gray-light: #e5e5e5;
+
+  /* Semantic */
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-gray);
+  --color-text-muted: var(--color-gray-dark);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-accent: var(--color-accent);
+}
