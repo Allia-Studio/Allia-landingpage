@@ -1,0 +1,51 @@
+---
+/**
+ * NosotrosSection.astro - Sección NOSOTROS
+ * Párrafo introductorio + Equipo con cards hover
+ */
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import TeamCard from '../ui/TeamCard.astro';
+import {
+  NOSOTROS_SECTION,
+  TEAM,
+} from '../../lib/constants';
+---
+
+<Section id={NOSOTROS_SECTION.sectionId} background="default" padded aria-labelledby="nosotros-title">
+  <Container>
+    <!-- Intro -->
+    <header class="mb-20 md:mb-28">
+      <span class="inline-block text-sm md:text-base text-(--color-accent-hover) tracking-[0.25em] uppercase mb-4 font-medium">
+        {NOSOTROS_SECTION.label}
+      </span>
+      <h2
+        id="nosotros-title"
+        class="font-title text-[length:var(--text-section-title)] text-(--color-white) leading-[1.02] mb-8"
+      >
+        {NOSOTROS_SECTION.title}
+      </h2>
+      <p class="text-lg md:text-xl lg:text-2xl text-(--color-gray-light) leading-relaxed">
+        {NOSOTROS_SECTION.description}
+      </p>
+    </header>
+
+    <!-- Equipo -->
+    <div>
+      <div class="flex items-center gap-6 mb-10 md:mb-12">
+        <span class="flex-1 h-px bg-(--color-gray-dark)"></span>
+        <h3 class="font-title text-2xl md:text-3xl text-(--color-white)">
+          {NOSOTROS_SECTION.teamSubtitle}
+        </h3>
+        <span class="flex-1 h-px bg-(--color-gray-dark)"></span>
+      </div>
+
+      <!-- Team Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {TEAM.map((member) => (
+          <TeamCard {...member} />
+        ))}
+      </div>
+    </div>
+  </Container>
+</Section>

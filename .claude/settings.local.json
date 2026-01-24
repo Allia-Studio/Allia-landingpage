@@ -21,7 +21,15 @@
       "Bash(copy:*)",
       "Skill(commit)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: rebuild landing page architecture\n\n- Add CSS token system \\(colors, typography, spacing, effects\\)\n- Create section components \\(Servicios, Proceso, Proyectos, Blog, FAQ, CTA, Footer\\)\n- Add UI components \\(ServiceCard, ProjectCard, Accordion, Tag, etc.\\)\n- Replace SVG logos with PNG versions\n- Remove responsive design and shadows\n- Simplify Navbar with scroll-based state changes\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nrefactor: cleanup project to navbar and hero only\n\n- Remove 14 icon components\n- Remove 7 section components \\(Servicios, Proceso, Proyectos, Blog, FAQ, CTA, Footer\\)\n- Remove 7 UI components \\(ServiceCard, ProjectCard, MotorCard, etc.\\)\n- Clean constants.ts \\(keep only navbar/hero related\\)\n- Clean types.ts \\(keep only navbar/hero related\\)\n- Simplify index.astro to navbar + hero\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(git stash pop:*)",
+      "Skill(typescript)",
+      "Bash(npm run dev:*)",
+      "WebSearch",
+      "Bash(node scripts/optimize-images.mjs:*)"
     ]
   },
   "enabledMcpjsonServers": [

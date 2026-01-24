@@ -1,9 +1,9 @@
 /**
- * Custom Utility Classes
- * Project-specific utilities beyond Tailwind defaults
+ * Clases de Utilidad Personalizadas
+ * Utilidades específicas del proyecto más allá de los defaults de Tailwind
  */
 
-/* Font utilities */
+/* Utilidades de fuentes */
 .font-display {
   font-family: var(--font-display);
 }
@@ -12,7 +12,7 @@
   font-family: var(--font-title);
 }
 
-/* Link underline animation */
+/* Animación de subrayado en links */
 .link-underline {
   position: relative;
   padding-top: 12px;
@@ -40,7 +40,7 @@
   border-radius: 2px;
 }
 
-/* Text gradient utility */
+/* Utilidad de gradiente de texto */
 .text-gradient-accent {
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
   -webkit-background-clip: text;
@@ -48,7 +48,7 @@
   background-clip: text;
 }
 
-/* Section backgrounds */
+/* Fondos de sección */
 .bg-section-dark {
   background-color: var(--color-bg-dark);
 }
@@ -57,7 +57,7 @@
   background-color: var(--color-bg);
 }
 
-/* Card hover effect */
+/* Efecto hover en cards */
 .card-hover {
   transition: transform var(--transition-normal);
 }
@@ -66,7 +66,7 @@
   transform: translateY(-4px);
 }
 
-/* Scrollbar styling */
+/* Estilos de scrollbar */
 .scrollbar-thin {
   scrollbar-width: thin;
   scrollbar-color: var(--color-gray-dark) transparent;
@@ -86,7 +86,7 @@
   border-radius: var(--radius-pill);
 }
 
-/* Focus ring utility */
+/* Utilidad de anillo de focus */
 .focus-ring {
   outline: none;
 }

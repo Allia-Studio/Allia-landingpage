@@ -6,7 +6,7 @@
 interface Props {
   id?: string;
   class?: string;
-  background?: 'default' | 'dark' | 'light' | 'surface';
+  background?: 'default' | 'dark' | 'light' | 'lighter' | 'surface';
   fullHeight?: boolean;
   /** Agrega padding vertical estándar */
   padded?: boolean;
@@ -21,10 +21,11 @@ const {
 } = Astro.props;
 
 const bgClasses: Record<string, string> = {
-  default: 'bg-[--color-bg]',
-  dark: 'bg-[--color-bg-dark]',
-  light: 'bg-[--color-white] text-[--color-bg]',
-  surface: 'bg-[--color-surface]'
+  default: 'bg-(--color-bg)',
+  dark: 'bg-(--color-bg-dark)',
+  light: 'bg-(--color-white) text-(--color-bg)',
+  lighter: 'bg-(--color-gray-lighter) text-(--color-bg)',
+  surface: 'bg-(--color-surface)'
 };
 
 const baseClasses = [

@@ -1,29 +1,38 @@
 /**
- * Spacing Tokens
- * Container, layout spacing, and z-index scale
+ * Tokens de Espaciado - Fluid Scaling
+ * Usa clamp() para escalado fluido entre viewports
+ * Formato: clamp(min, preferred, max)
  */
 @theme {
-  /* Container */
+  /* Contenedor - Fluid */
   --container-max-width: 1800px;
   --container-narrow: 1200px;
   --container-wide: 2000px;
 
-  /* Spacing - General */
-  --spacing-container: 48px;
-  --spacing-section: 120px;
+  /* Espaciado de Contenedor - Fluid (márgenes laterales)
+   * Mobile: 24px | Desktop: 5vw | Max: 120px */
+  --spacing-container: clamp(24px, 5vw, 120px);
 
-  /* Spacing - Navbar */
-  --spacing-nav-height: 80px;
-  --spacing-nav-top: 36px;
-  --spacing-nav-gap: 80px;
+  /* Espaciado de Sección - Fluid (padding vertical)
+   * Mobile: 80px | Desktop: 10vw | Max: 160px */
+  --spacing-section: clamp(80px, 10vw, 160px);
+
+  /* Espaciado - Navbar */
+  --spacing-nav-height: clamp(64px, 6vw, 80px);
+  --spacing-nav-top: clamp(20px, 3vw, 36px);
+  --spacing-nav-gap: clamp(40px, 6vw, 80px);
   --spacing-nav-padding: 16px;
   --spacing-nav-padding-scrolled: 8px;
 
-  /* Spacing - Hero */
-  --spacing-hero-title-bottom: 40px;
-  --spacing-hero-subtitle-bottom: 48px;
+  /* Espaciado - Hero */
+  --spacing-hero-title-bottom: clamp(24px, 3vw, 40px);
+  --spacing-hero-subtitle-bottom: clamp(32px, 4vw, 48px);
 
-  /* Z-index Scale */
+  /* Espaciado - Componentes (fluid) */
+  --spacing-component-gap: clamp(16px, 2vw, 32px);
+  --spacing-card-padding: clamp(24px, 3vw, 48px);
+
+  /* Escala de Z-index */
   --z-base: 0;
   --z-dropdown: 100;
   --z-sticky: 200;

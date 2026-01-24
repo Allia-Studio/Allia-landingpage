@@ -7,7 +7,7 @@ import { NAV_LINKS } from '../../lib/constants';
   class="fixed top-0 left-0 w-full z-[var(--z-navbar)] pt-[var(--spacing-nav-top)] px-[var(--spacing-container)]"
   aria-label="Navegación principal"
 >
-  <!-- Inner container - becomes unified bar on scroll -->
+  <!-- Contenedor interno - se convierte en barra unificada al hacer scroll -->
   <div class="navbar-inner w-full max-w-[var(--container-max-width)] mx-auto flex justify-between items-center">
 
     <!-- Logo -->
@@ -16,7 +16,7 @@ import { NAV_LINKS } from '../../lib/constants';
       <img src="/logo-dark.png" alt="Allia Studio" class="logo-dark h-5 w-auto" />
     </a>
 
-    <!-- Nav links -->
+    <!-- Links de navegación -->
     <div class="flex items-center gap-[var(--spacing-nav-gap)]">
       {NAV_LINKS.map((link) => (
         <a
@@ -32,14 +32,14 @@ import { NAV_LINKS } from '../../lib/constants';
 </nav>
 
 <style>
-  /* Single unified transition on navbar-inner only */
+  /* Transición unificada solo en navbar-inner */
   .navbar-inner {
     padding: 12px 16px;
     background-color: transparent;
     transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Nav link color transition */
+  /* Transición de color en links */
   .nav-link {
     transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -49,12 +49,12 @@ import { NAV_LINKS } from '../../lib/constants';
                 background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Scrolled state - unified bar */
+  /* Estado scrolled - barra unificada */
   #navbar.scrolled .navbar-inner {
     background-color: var(--color-white);
   }
 
-  /* Text color changes when scrolled */
+  /* Cambio de color del texto al hacer scroll */
   #navbar.scrolled .nav-link {
     color: var(--color-bg);
   }
@@ -63,7 +63,7 @@ import { NAV_LINKS } from '../../lib/constants';
     background-color: var(--color-bg);
   }
 
-  /* Logo swap - default state (white logo visible) */
+  /* Intercambio de logo - estado por defecto (logo blanco visible) */
   .logo-white {
     display: block;
   }
@@ -72,7 +72,7 @@ import { NAV_LINKS } from '../../lib/constants';
     display: none;
   }
 
-  /* Logo swap when scrolled (dark logo visible) */
+  /* Intercambio de logo al hacer scroll (logo oscuro visible) */
   #navbar.scrolled .logo-white {
     display: none;
   }
@@ -109,6 +109,7 @@ import { NAV_LINKS } from '../../lib/constants';
     window.addEventListener('scroll', handleScroll, { signal, passive: true });
     handleScroll();
 
+    // Limpieza en View Transitions
     document.addEventListener('astro:before-swap', () => {
       controller.abort();
     }, { once: true });

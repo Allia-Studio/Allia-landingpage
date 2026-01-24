@@ -1,0 +1,35 @@
+---
+/**
+ * ServiciosSection.astro - Sección "QUÉ HACEMOS"
+ * Layout estilo Ravn con filas horizontales
+ */
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import ServiceRow from '../ui/ServiceRow.astro';
+import { SERVICES, SERVICIOS_SECTION } from '../../lib/constants';
+---
+
+<Section id={SERVICIOS_SECTION.sectionId} background="light" padded aria-labelledby="servicios-title">
+  <Container>
+    <header class="mb-16 md:mb-20">
+      <span class="inline-block text-sm md:text-base text-(--color-accent-hover) tracking-[0.25em] uppercase mb-4 font-medium">
+        {SERVICIOS_SECTION.label}
+      </span>
+      <h2
+        id="servicios-title"
+        class="font-title text-[length:var(--text-section-title)] text-(--color-bg) leading-[1.02] mb-6"
+      >
+        {SERVICIOS_SECTION.title}
+      </h2>
+      <p class="text-lg md:text-xl lg:text-2xl text-(--color-gray-dark)">
+        {SERVICIOS_SECTION.subtitle}
+      </p>
+    </header>
+
+    <div class="border-t border-(--color-gray-light)">
+      {SERVICES.map((service) => (
+        <ServiceRow {...service} />
+      ))}
+    </div>
+  </Container>
+</Section>

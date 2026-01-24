@@ -1,0 +1,89 @@
+---
+/**
+ * ModeloSection.astro - Sección "DOS CAMINOS, UNA META"
+ * Presenta las dos formas de trabajar con Allia
+ */
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import MotorCard from '../ui/MotorCard.astro';
+import { MODELO_SECTION, MODELOS, CALCOM } from '../../lib/constants';
+---
+
+<Section id={MODELO_SECTION.sectionId} background="light" padded aria-labelledby="modelo-title">
+  <Container>
+    <header class="mb-16 md:mb-20">
+      <span class="inline-block text-sm md:text-base text-(--color-accent-hover) tracking-[0.25em] uppercase mb-4 font-medium">
+        {MODELO_SECTION.label}
+      </span>
+      <h2
+        id="modelo-title"
+        class="font-title text-[length:var(--text-section-title)] text-(--color-bg) leading-[1.02] mb-6"
+      >
+        {MODELO_SECTION.title}
+      </h2>
+      <p class="text-lg md:text-xl lg:text-2xl text-(--color-gray-dark) leading-relaxed">
+        {MODELO_SECTION.subtitle}
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+      {MODELOS.map((modelo) => (
+        <MotorCard title={modelo.title} subtitle={modelo.subtitle} bullets={modelo.bullets} />
+      ))}
+    </div>
+
+    <div class="text-center">
+      <button
+        class="btn-dark inline-flex items-center justify-center px-9 py-5 text-2xl font-display font-normal uppercase tracking-wide cursor-pointer relative overflow-hidden border-2 border-(--color-bg)"
+        data-cal-link={CALCOM.link}
+        data-cal-namespace={CALCOM.namespace}
+        data-cal-config={JSON.stringify(CALCOM.config)}
+      >
+        <span class="btn-text relative z-10">{MODELO_SECTION.ctaGeneral}</span>
+        <span class="btn-bg"></span>
+      </button>
+    </div>
+  </Container>
+</Section>
+
+<style>
+  /* Botón estilo hero pero para fondo claro */
+  .btn-dark {
+    color: var(--color-white);
+    background: transparent;
+  }
+
+  .btn-dark .btn-bg {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-bg);
+    z-index: 0;
+  }
+
+  .btn-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-accent);
+    transform: translateX(-100%);
+    transition: transform 0.4s var(--ease-out-expo);
+    z-index: 1;
+  }
+
+  .btn-dark:hover {
+    color: var(--color-white);
+  }
+
+  .btn-dark:hover::before {
+    transform: translateX(0);
+  }
+
+  .btn-dark .btn-text {
+    z-index: 2;
+  }
+
+  .btn-dark:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+</style>

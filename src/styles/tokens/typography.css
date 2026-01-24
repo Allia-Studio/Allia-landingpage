@@ -1,14 +1,14 @@
 /**
- * Typography Tokens
- * Font families and type scale for Allia Studio
+ * Tokens de Tipografía - Fluid Scaling
+ * Familias de fuentes y escala de tamaños con clamp() para fluidez
  */
 @theme {
-  /* Font Families */
+  /* Familias de Fuentes */
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
   --font-title: 'Changa One', cursive, system-ui, sans-serif;
   --font-display: 'Rowdies', cursive, system-ui, sans-serif;
 
-  /* Typography Scale */
+  /* Escala Tipográfica Base (rem) */
   --text-xs: 0.75rem;      /* 12px */
   --text-sm: 0.875rem;     /* 14px */
   --text-base: 1rem;       /* 16px */
@@ -22,16 +22,22 @@
   --text-7xl: 4.5rem;      /* 72px */
   --text-8xl: 6rem;        /* 96px */
   --text-9xl: 8rem;        /* 128px */
-  --text-hero: 9rem;       /* 144px - Hero title */
 
-  /* Line Heights */
+  /* Tipografía Fluid para Headlines
+   * Escala fluidamente según viewport */
+  --text-hero: clamp(4rem, 10vw, 9rem);           /* Hero principal */
+  --text-section-title: clamp(2.5rem, 6vw, 6rem); /* Títulos de sección */
+  --text-card-title: clamp(1.5rem, 2.5vw, 2rem);  /* Títulos de cards */
+  --text-body-lg: clamp(1rem, 1.5vw, 1.25rem);    /* Body grande */
+
+  /* Alturas de Línea */
   --leading-none: 1;
   --leading-tight: 1.1;
   --leading-snug: 1.25;
   --leading-normal: 1.5;
   --leading-relaxed: 1.65;
 
-  /* Letter Spacing */
+  /* Espaciado de Letras */
   --tracking-tight: -0.02em;
   --tracking-normal: 0;
   --tracking-wide: 0.02em;

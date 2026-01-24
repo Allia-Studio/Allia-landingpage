@@ -8,12 +8,12 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
 <Section fullHeight padded={false} class="pt-20 overflow-hidden">
   <Container class="relative z-10">
     <h1 class="hero-title font-title font-normal leading-[1.02] mb-[var(--spacing-hero-title-bottom)] text-[--color-white] tracking-tight">
-      <!-- Fallback content for no-JS / SEO -->
+      <!-- Contenido de respaldo para no-JS / SEO -->
       <noscript>
         <span class="block">{HERO.lines[0].text}</span>
         <span class="block">{HERO.lines[1].text}</span>
       </noscript>
-      <!-- Animated content -->
+      <!-- Contenido animado -->
       <span class="block min-h-[1.1em]" id={ELEMENT_IDS.heroTitleLine1} aria-label={HERO.lines[0].text}></span>
       <span class="block min-h-[1.1em]" id={ELEMENT_IDS.heroTitleLine2} aria-label={HERO.lines[1].text}></span>
     </h1>
@@ -48,27 +48,27 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
 </Section>
 
 <script define:vars={{ ANIMATION, HERO, ELEMENT_IDS }}>
-  // Typewriter animation using centralized constants
+  // Animación typewriter usando constantes centralizadas
   const lines = HERO.lines;
   const typeSpeed = ANIMATION.typeSpeed;
   const cursorChar = HERO.cursorChar;
 
-  // Animation cancellation flag for View Transitions
+  // Flag de cancelación para View Transitions
   let animationAborted = false;
 
   /**
-   * Creates a cancellable delay promise
-   * @param {number} ms - Milliseconds to wait
-   * @returns {Promise<boolean>} - Resolves to true if completed, false if aborted
+   * Crea una promesa de delay cancelable
+   * @param {number} ms - Milisegundos a esperar
+   * @returns {Promise<boolean>} - Resuelve a true si completó, false si se abortó
    */
   function delay(ms) {
     return new Promise(resolve => {
       let checkAbort;
       const timeoutId = setTimeout(() => {
-        clearInterval(checkAbort); // Clear interval when timeout completes
+        clearInterval(checkAbort);
         resolve(true);
       }, ms);
-      // Check periodically if animation was aborted
+      // Verifica periódicamente si la animación fue abortada
       checkAbort = setInterval(() => {
         if (animationAborted) {
           clearTimeout(timeoutId);
@@ -80,14 +80,14 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
   }
 
   /**
-   * Types text character by character with a blinking cursor
-   * @param {string} elementId - ID of the target element
-   * @param {string} text - Text to type
+   * Escribe texto caracter por caracter con cursor parpadeante
+   * @param {string} elementId - ID del elemento objetivo
+   * @param {string} text - Texto a escribir
    */
   async function typeText(elementId, text) {
     const element = document.getElementById(elementId);
     if (!element) {
-      console.warn(`[HeroSection] Element not found: ${elementId}`);
+      console.warn(`[HeroSection] Elemento no encontrado: ${elementId}`);
       return;
     }
 
@@ -100,7 +100,7 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
       element.textContent = text.slice(0, i) + cursorChar;
     }
 
-    // Remove cursor after typing
+    // Quita el cursor después de escribir
     if (animationAborted) return;
     await delay(ANIMATION.cursorRemoveDelay);
     if (!animationAborted) {
@@ -109,7 +109,7 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
   }
 
   /**
-   * Shows static content immediately (fallback for aborted animation)
+   * Muestra contenido estático inmediatamente (fallback para animación abortada)
    */
   function showStaticContent() {
     lines.forEach(line => {
@@ -131,7 +131,7 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
   }
 
   /**
-   * Runs the typewriter animation sequence
+   * Ejecuta la secuencia de animación typewriter
    */
   async function runTypewriter() {
     try {
@@ -144,13 +144,13 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
 
       if (animationAborted) return showStaticContent();
 
-      // Fade in subtitle and CTA together after typing
+      // Fade in del subtítulo y CTA juntos después de escribir
       const subtitle = document.getElementById(ELEMENT_IDS.heroSubtitle);
       const cta = document.getElementById(ELEMENT_IDS.heroCta);
 
       await delay(ANIMATION.postTypingDelay);
 
-      // Show both at the same time
+      // Muestra ambos al mismo tiempo
       if (subtitle) {
         subtitle.classList.remove('opacity-0');
         subtitle.classList.add('opacity-100');
@@ -161,17 +161,17 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
         cta.classList.add('opacity-100', 'translate-y-0');
       }
     } catch (error) {
-      console.error('[HeroSection] Animation error:', error);
+      console.error('[HeroSection] Error de animación:', error);
       showStaticContent();
     }
   }
 
-  // Cleanup on View Transitions navigation
+  // Limpieza en navegación con View Transitions
   document.addEventListener('astro:before-swap', () => {
     animationAborted = true;
   }, { once: true });
 
-  // Start animation when DOM is ready
+  // Inicia la animación cuando el DOM está listo
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', runTypewriter);
   } else {
@@ -180,7 +180,7 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
 </script>
 
 <style>
-  /* Hero title size */
+  /* Tamaño del título hero */
   .hero-title {
     font-size: var(--text-hero);
     text-decoration: none;
@@ -190,7 +190,7 @@ import { HERO, ANIMATION, CALCOM, ELEMENT_IDS } from '../../lib/constants';
     text-decoration: none;
   }
 
-  /* Animation transition for CTA button appear effect */
+  /* Transición de aparición del botón CTA */
   #hero-cta {
     transition: opacity var(--transition-slow), transform var(--transition-slow);
   }

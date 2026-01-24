@@ -1,5 +1,5 @@
 // ============================================
-// Navigation Types
+// Tipos de Navegación
 // ============================================
 export interface NavLink {
   readonly label: string;
@@ -8,7 +8,7 @@ export interface NavLink {
 }
 
 // ============================================
-// Animation Types
+// Tipos de Animación
 // ============================================
 export interface TypewriterLine {
   readonly element: string;
@@ -17,7 +17,7 @@ export interface TypewriterLine {
 }
 
 // ============================================
-// Component Props Types
+// Props de Componentes
 // ============================================
 export interface ButtonProps {
   href?: string;
@@ -42,7 +42,7 @@ export interface LayoutProps {
 }
 
 // ============================================
-// Cal.com Types
+// Tipos de Cal.com
 // ============================================
 export type CalComLayout = 'month_view' | 'week_view' | 'column_view';
 
@@ -51,7 +51,24 @@ export interface CalComConfig {
 }
 
 // ============================================
-// Site Types
+// Tipos de Servicios
+// ============================================
+export interface TechItem {
+  readonly name: string;
+}
+
+export type ServiceIcon = 'globe' | 'mobile' | 'desktop' | 'brain' | 'zap';
+
+export interface ServiceItem {
+  readonly id: string;
+  readonly title: string;
+  readonly description: string;
+  readonly icon: ServiceIcon;
+  readonly technologies: readonly TechItem[];
+}
+
+// ============================================
+// Tipos del Sitio
 // ============================================
 export interface SiteConfig {
   readonly name: string;
@@ -59,3 +76,27 @@ export interface SiteConfig {
   readonly description: string;
   readonly themeColor: string;
 }
+
+// ============================================
+// Tipos de Equipo
+// ============================================
+export interface TeamMember {
+  readonly id: string;
+  readonly name: string;
+  readonly role: string;
+  readonly linkedin: string;
+  readonly photo: string;
+}
+
+// ============================================
+// Tipos de Modelo de Negocio
+// ============================================
+export interface ModeloCard {
+  readonly letter: 'A' | 'B';
+  readonly title: string;
+  readonly subtitle: string;
+  readonly bullets: readonly string[];
+  readonly ctaText: string;
+  readonly ctaHref: string;
+}
+

@@ -44,7 +44,7 @@ const imageURL = new URL(image, SITE.url);
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={imageURL} />
 
-		<!-- Preconnect to Google Fonts for faster loading -->
+		<!-- Preconexión a Google Fonts para carga más rápida -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -54,13 +54,13 @@ const imageURL = new URL(image, SITE.url);
 			href="https://fonts.googleapis.com/css2?family=Changa+One&family=Rowdies:wght@300;400;700&family=Inter:wght@400;500;600;700&display=swap"
 		/>
 
-		<!-- Theme color for mobile browsers -->
+		<!-- Color del tema para navegadores móviles -->
 		<meta name="theme-color" content={SITE.themeColor} />
 
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen">
-		<!-- Skip to content link for accessibility -->
+		<!-- Link para saltar al contenido (accesibilidad) -->
 		<a
 			href="#main-content"
 			class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded"
@@ -70,7 +70,7 @@ const imageURL = new URL(image, SITE.url);
 
 		<slot />
 
-		<!-- Cal.com element-click embed code (lazy loaded on user interaction) -->
+		<!-- Código embed de Cal.com (carga lazy en interacción del usuario) -->
 		<script>
 			let calLoaded = false;
 
@@ -120,19 +120,19 @@ const imageURL = new URL(image, SITE.url);
 				});
 			}
 
-			// Lazy load Cal.com on user interaction with CTA button
+			// Carga lazy de Cal.com en interacción con el botón CTA
 			document.addEventListener('DOMContentLoaded', () => {
 				const ctaButton = document.querySelector('[data-cal-link]');
 				if (ctaButton) {
-					// Load on hover (desktop)
+					// Carga en hover (desktop)
 					ctaButton.addEventListener('mouseenter', loadCalcom, { once: true });
-					// Load on focus (keyboard navigation)
+					// Carga en focus (navegación por teclado)
 					ctaButton.addEventListener('focus', loadCalcom, { once: true });
-					// Load on touch start (mobile)
+					// Carga en touch start (móvil)
 					ctaButton.addEventListener('touchstart', loadCalcom, { once: true, passive: true });
 				}
 
-				// Also preload after page is idle (fallback)
+				// También precarga después de que la página esté idle (fallback)
 				if ('requestIdleCallback' in window) {
 					requestIdleCallback(loadCalcom, { timeout: 3000 });
 				} else {

@@ -1,16 +1,16 @@
 /**
- * Global Styles - Entry Point
+ * Estilos Globales - Punto de Entrada
  * Allia Studio Landing Page
  */
 
 /* ================================
-   Framework Imports
+   Importaciones del Framework
    ================================ */
 @import "tailwindcss";
 @import "tailwind-animations";
 
 /* ================================
-   Design Tokens (layer: theme)
+   Tokens de Diseño (layer: theme)
    ================================ */
 @import "./tokens/colors.css" layer(theme);
 @import "./tokens/typography.css" layer(theme);
@@ -18,12 +18,12 @@
 @import "./tokens/effects.css" layer(theme);
 
 /* ================================
-   Custom Utilities (layer: utilities)
+   Utilidades Personalizadas (layer: utilities)
    ================================ */
 @import "./utilities.css" layer(utilities);
 
 /* ================================
-   Base Styles
+   Estilos Base
    ================================ */
 html {
   scroll-behavior: smooth;
@@ -40,7 +40,7 @@ body {
 }
 
 /* ================================
-   Accessibility: Reduced Motion
+   Accesibilidad: Movimiento Reducido
    ================================ */
 @media (prefers-reduced-motion: reduce) {
   *,

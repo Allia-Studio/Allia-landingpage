@@ -1,0 +1,33 @@
+---
+/**
+ * MotorCard.astro - Tarjeta para la sección MODELO
+ * Muestra una opción de modelo de trabajo (Desarrollo o Programa Allia)
+ * Diseñado para fondo claro
+ */
+interface Props {
+  title: string;
+  subtitle: string;
+  bullets: readonly string[];
+}
+
+const { title, subtitle, bullets } = Astro.props;
+---
+
+<article class="flex flex-col p-8 md:p-10 lg:p-12 border border-(--color-gray-light) rounded-lg bg-(--color-white)">
+  <h3 class="font-title text-2xl md:text-3xl lg:text-4xl text-(--color-bg) mb-3">
+    {title}
+  </h3>
+
+  <p class="text-base md:text-lg text-(--color-gray-dark) mb-6">
+    {subtitle}
+  </p>
+
+  <ul class="space-y-3">
+    {bullets.map((bullet) => (
+      <li class="flex items-center gap-3 text-sm md:text-base text-(--color-gray-dark)">
+        <span class="w-1.5 h-1.5 rounded-full bg-(--color-accent) flex-shrink-0"></span>
+        <span>{bullet}</span>
+      </li>
+    ))}
+  </ul>
+</article>
