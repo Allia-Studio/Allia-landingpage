@@ -12,20 +12,8 @@ import { NAV_LINKS } from '../../lib/constants';
 
     <!-- Logo -->
     <a href="/" class="flex items-center" aria-label="Allia Studio - Ir al inicio">
-      <img
-        src="/logo-white.png"
-        alt="Allia Studio"
-        class="logo-dark h-5 w-auto"
-        width="80"
-        height="20"
-      />
-      <img
-        src="/logo-dark.png"
-        alt="Allia Studio"
-        class="logo-light h-5 w-auto"
-        width="80"
-        height="20"
-      />
+      <img src="/logo-white.png" alt="Allia Studio" class="logo-white h-5 w-auto" />
+      <img src="/logo-dark.png" alt="Allia Studio" class="logo-dark h-5 w-auto" />
     </a>
 
     <!-- Nav links -->
@@ -75,21 +63,21 @@ import { NAV_LINKS } from '../../lib/constants';
     background-color: var(--color-bg);
   }
 
-  /* Logo visibility - default state (white logo) */
-  .logo-dark {
+  /* Logo swap - default state (white logo visible) */
+  .logo-white {
     display: block;
   }
 
-  .logo-light {
+  .logo-dark {
     display: none;
   }
 
-  /* Logo swap when scrolled (dark logo) - instant swap, no animation */
+  /* Logo swap when scrolled (dark logo visible) */
+  #navbar.scrolled .logo-white {
+    display: none;
+  }
+
   #navbar.scrolled .logo-dark {
-    display: none;
-  }
-
-  #navbar.scrolled .logo-light {
     display: block;
   }
 </style>

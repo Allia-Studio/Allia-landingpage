@@ -5,9 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://alliastudio.com', // Cambiar por tu dominio real
+  site: 'https://allia.dev',
   vite: {
     plugins: [tailwindcss()]
   },

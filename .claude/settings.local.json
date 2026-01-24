@@ -19,7 +19,9 @@
       "Bash(dir:*)",
       "Bash(copy \"c:\\\\Users\\\\ferna\\\\OneDrive\\\\Documentos\\\\Programming\\\\Allia-landingpage\\\\nuevos logos\\\\allia-color-blanco-una-letra.png\" \"c:\\\\Users\\\\ferna\\\\OneDrive\\\\Documentos\\\\Programming\\\\Allia-landingpage\\\\public\\\\favicon.png\")",
       "Bash(copy:*)",
-      "Skill(commit)"
+      "Skill(commit)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: rebuild landing page architecture\n\n- Add CSS token system \\(colors, typography, spacing, effects\\)\n- Create section components \\(Servicios, Proceso, Proyectos, Blog, FAQ, CTA, Footer\\)\n- Add UI components \\(ServiceCard, ProjectCard, Accordion, Tag, etc.\\)\n- Replace SVG logos with PNG versions\n- Remove responsive design and shadows\n- Simplify Navbar with scroll-based state changes\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
     ]
   },
   "enabledMcpjsonServers": [
