@@ -6,6 +6,8 @@ import type {
   ServiceItem,
   TeamMember,
   ModeloCard,
+  Project,
+  SocialLink,
 } from './types';
 
 // ============================================
@@ -175,7 +177,7 @@ export const SERVICES: readonly ServiceItem[] = [
 // Sección Nosotros
 // ============================================
 export const NOSOTROS_SECTION = {
-  label: 'Nosotros',
+  label: 'Quiénes Somos',
   title: 'NOSOTROS.',
   sectionId: 'nosotros',
   description: 'En Allia trabajamos contigo, no solo para ti. Nos involucramos, entendemos tu negocio y construimos soluciones que realmente funcionan.',
@@ -224,25 +226,79 @@ export const MODELO_SECTION = {
 
 export const MODELOS: readonly ModeloCard[] = [
   {
-    letter: 'A',
-    title: 'Desarrollo',
-    subtitle: 'Control total sobre tu proyecto.',
-    bullets: [
-      'Define exactamente lo que necesitas',
-      'Recibe tu producto completo y listo',
-    ],
-    ctaText: 'Cotizar proyecto →',
-    ctaHref: '#',
+    id: 'desarrollo',
+    title: 'Desarrollo a Medida',
+    subtitle: 'Ejecución de proyectos',
+    description: 'Tienes un proyecto claro que necesita cobrar vida. Puede ser una plataforma, una aplicación, una integración, o una mejora a un sistema existente. Nosotros nos encargamos de diseñarlo, construirlo y entregártelo funcionando. Tú defines el destino, nosotros trazamos la ruta técnica y la ejecutamos.',
+    idealFor: 'Empresas con una necesidad tecnológica clara, negocios que buscan digitalizar o mejorar sus operaciones, o proyectos con objetivos definidos que necesitan un equipo que los ejecute.',
   },
   {
-    letter: 'B',
-    title: 'Programa Allia',
-    subtitle: 'Un equipo técnico que crece contigo.',
-    bullets: [
-      'Nos convertimos en tu equipo técnico',
-      'Programa exclusivo con evaluación previa',
-    ],
-    ctaText: 'Aplicar →',
-    ctaHref: '#',
+    id: 'socio-tecnologico',
+    title: 'Socio Tecnológico',
+    subtitle: 'Construcción de productos',
+    description: 'Conoces tu industria, tienes un problema real que resolver, y evidencia de que el mercado lo necesita. Lo que te falta es el equipo técnico para construirlo bien. Nosotros nos convertimos en ese equipo. Pensamos el producto contigo, tomamos decisiones juntos, y nos comprometemos con su éxito.',
+    idealFor: 'Fundadores con expertise de industria construyendo su primer producto digital, startups en etapa temprana con validación de mercado, o emprendedores con un MVP que ya tiene usuarios y buscan un equipo técnico para llevarlo al siguiente nivel.',
   },
 ] as const;
+
+// ============================================
+// Sección Proyectos
+// ============================================
+export const PROYECTOS_SECTION = {
+  label: 'Nuestro Trabajo',
+  title: 'PROYECTOS.',
+  subtitle: 'Algunos de los productos que hemos ayudado a construir.',
+  sectionId: 'proyectos',
+} as const;
+
+export const PROJECTS: readonly Project[] = [
+  {
+    id: 'aethon',
+    name: 'Aethon',
+    image: '/images/projects/aethon.webp',
+    url: 'https://aethon.io',
+    size: 'wide',
+  },
+  {
+    id: 'pulse',
+    name: 'Pulse',
+    image: '/images/projects/pulse.webp',
+    url: 'https://pulse.health',
+    size: 'normal',
+  },
+  {
+    id: 'flowai',
+    name: 'FlowAI',
+    image: '/images/projects/flowai.webp',
+    url: 'https://flowai.io',
+    size: 'normal',
+  },
+] as const;
+
+// ============================================
+// Footer
+// ============================================
+export const FOOTER = {
+  phrase: ['Hagámoslo', 'realidad.'],
+  ctaButton: 'Conversemos →',
+  navLinks: [
+    { label: 'SERVICIOS.', href: '#servicios' },
+    { label: 'NOSOTROS.', href: '#nosotros' },
+    { label: 'MODELO.', href: '#modelo' },
+    { label: 'PROYECTOS.', href: '#proyectos' },
+  ] satisfies readonly NavLink[],
+  blogLink: { label: 'BLOG', href: '/blog' },
+  socials: [
+    { platform: 'linkedin', url: 'https://www.linkedin.com/company/111126341/' },
+    { platform: 'github', url: 'https://github.com/Allia-Studio' },
+    { platform: 'x', url: 'https://x.com/allia.studio' },
+    { platform: 'tiktok', url: 'https://tiktok.com/@allia.studio' },
+  ] satisfies readonly SocialLink[],
+  contact: {
+    email: 'info@allia.dev',
+  },
+  copyright: '© 2026 Allia Studio',
+  legalLinks: [
+    { label: 'Política de Privacidad', href: '/privacidad' },
+  ] satisfies readonly NavLink[],
+} as const;

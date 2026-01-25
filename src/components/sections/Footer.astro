@@ -1,0 +1,94 @@
+---
+/**
+ * Footer.astro - Footer de la landing page
+ * Fondo negro puro | Frase grande + CTA | Navegación | Sociales + Contacto | Copyright
+ */
+import Container from '../ui/Container.astro';
+import Button from '../ui/Button.astro';
+import { FOOTER, CALCOM } from '../../lib/constants';
+---
+
+<footer class="bg-(--color-black) pt-24 pb-10">
+  <Container>
+    <!-- Main Content Grid: 4 columnas -->
+    <div class="grid grid-cols-4 gap-16 mb-20">
+
+      <!-- Columna 1-2: Frase + CTA Button -->
+      <div class="col-span-2">
+        <h2 class="font-title text-5xl lg:text-7xl text-(--color-white) leading-[1.1] mb-10">
+          {FOOTER.phrase[0]}<br />{FOOTER.phrase[1]}
+        </h2>
+        <Button
+          variant="primary"
+          data-cal-link={CALCOM.link}
+          data-cal-namespace={CALCOM.namespace}
+          data-cal-config={JSON.stringify(CALCOM.config)}
+        >
+          {FOOTER.ctaButton}
+        </Button>
+      </div>
+
+      <!-- Columna 3: Navegación -->
+      <div class="flex flex-col items-start">
+        <span class="block w-10 h-px bg-(--color-accent) mb-8"></span>
+        <nav class="flex flex-col gap-4 flex-1 items-start">
+          {FOOTER.navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="text-sm uppercase tracking-widest text-(--color-gray) hover:text-(--color-accent) transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <span class="block w-10 h-px bg-(--color-accent) my-8"></span>
+        <a
+          href={FOOTER.blogLink.href}
+          class="text-sm uppercase tracking-widest text-(--color-gray) hover:text-(--color-accent) transition-colors"
+        >
+          {FOOTER.blogLink.label}
+        </a>
+      </div>
+
+      <!-- Columna 4: Social + Contacto -->
+      <div class="flex flex-col items-start">
+        <span class="block w-10 h-px bg-(--color-accent) mb-8"></span>
+        <nav class="flex flex-col gap-4 flex-1 items-start">
+          {FOOTER.socials.map((social) => (
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm uppercase tracking-widest text-(--color-gray) hover:text-(--color-accent) transition-colors"
+            >
+              {social.platform.toUpperCase()}
+            </a>
+          ))}
+        </nav>
+        <span class="block w-10 h-px bg-(--color-accent) my-8"></span>
+        <span class="text-sm uppercase tracking-widest text-(--color-gray)">
+          {FOOTER.contact.email}
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="border-t border-(--color-white)/10 pt-8 flex justify-between items-center">
+      <span class="text-sm text-(--color-gray-dark)">
+        {FOOTER.copyright}
+      </span>
+      <div class="flex gap-8">
+        {FOOTER.legalLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm text-(--color-gray-dark) hover:underline transition-all"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+
+  </Container>
+</footer>

@@ -1,11 +1,10 @@
 ---
 /**
  * ModeloSection.astro - Sección "DOS CAMINOS, UNA META"
- * Presenta las dos formas de trabajar con Allia
+ * Diseño side-by-side para presentar los dos modelos de trabajo
  */
 import Section from '../ui/Section.astro';
 import Container from '../ui/Container.astro';
-import MotorCard from '../ui/MotorCard.astro';
 import { MODELO_SECTION, MODELOS, CALCOM } from '../../lib/constants';
 ---
 
@@ -26,15 +25,39 @@ import { MODELO_SECTION, MODELOS, CALCOM } from '../../lib/constants';
       </p>
     </header>
 
+    <!-- Cards lado a lado -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
       {MODELOS.map((modelo) => (
-        <MotorCard title={modelo.title} subtitle={modelo.subtitle} bullets={modelo.bullets} />
+        <article class="modelo-card flex flex-col p-6 md:p-8 border border-(--color-gray-light) bg-(--color-white)">
+          <h3 class="font-title text-2xl md:text-3xl text-(--color-bg) mb-5">
+            {modelo.title}
+          </h3>
+          <p class="text-base md:text-lg text-(--color-gray-dark) leading-relaxed">
+            {modelo.description}
+          </p>
+          <div class="mt-auto pt-6">
+            <span class="block h-px bg-(--color-gray-light) mb-5"></span>
+            <p class="flex items-start gap-2 text-base md:text-lg text-(--color-accent) font-medium mb-2">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span>Ideal para</span>
+            </p>
+            <p class="text-base md:text-lg text-(--color-gray-dark) leading-relaxed">
+              {modelo.idealFor}
+            </p>
+          </div>
+        </article>
       ))}
     </div>
 
+    <!-- CTA unificado -->
     <div class="text-center">
+      <p class="text-lg md:text-xl text-(--color-gray-dark) mb-6">
+        ¿No sabes cuál es para ti?
+      </p>
       <button
-        class="btn-dark inline-flex items-center justify-center px-9 py-5 text-2xl font-display font-normal uppercase tracking-wide cursor-pointer relative overflow-hidden border-2 border-(--color-bg)"
+        class="btn-dark inline-flex items-center justify-center px-7 py-4 text-xl font-display font-normal uppercase tracking-wide cursor-pointer relative overflow-hidden border-2 border-(--color-bg)"
         data-cal-link={CALCOM.link}
         data-cal-namespace={CALCOM.namespace}
         data-cal-config={JSON.stringify(CALCOM.config)}
@@ -71,7 +94,7 @@ import { MODELO_SECTION, MODELOS, CALCOM } from '../../lib/constants';
   }
 
   .btn-dark:hover {
-    color: var(--color-white);
+    color: var(--color-bg);
   }
 
   .btn-dark:hover::before {

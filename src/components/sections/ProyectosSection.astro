@@ -1,0 +1,37 @@
+---
+/**
+ * ProyectosSection.astro - Sección de proyectos estilo bento
+ * Grid con tarjetas de diferentes tamaños, hover effect como TeamCard
+ */
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import ProjectCard from '../ui/ProjectCard.astro';
+import { PROYECTOS_SECTION, PROJECTS } from '../../lib/constants';
+---
+
+<Section id={PROYECTOS_SECTION.sectionId} background="default" padded aria-labelledby="proyectos-title">
+  <Container>
+    <header class="mb-16 md:mb-20">
+      <span class="inline-block text-sm md:text-base text-(--color-accent-hover) tracking-[0.25em] uppercase mb-4 font-medium">
+        {PROYECTOS_SECTION.label}
+      </span>
+      <h2
+        id="proyectos-title"
+        class="font-title text-[length:var(--text-section-title)] text-(--color-white) leading-[1.02] mb-8"
+      >
+        {PROYECTOS_SECTION.title}
+      </h2>
+      <p class="text-lg md:text-xl lg:text-2xl text-(--color-gray) leading-relaxed">
+        {PROYECTOS_SECTION.subtitle}
+      </p>
+    </header>
+
+    <!-- Grid Bento: 3 columnas (2fr + 1fr + 1fr) -->
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-6 md:gap-8">
+      {PROJECTS.map((project) => (
+        <ProjectCard {...project} />
+      ))}
+    </div>
+  </Container>
+</Section>
+

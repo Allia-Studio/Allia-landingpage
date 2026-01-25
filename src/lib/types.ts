@@ -92,11 +92,33 @@ export interface TeamMember {
 // Tipos de Modelo de Negocio
 // ============================================
 export interface ModeloCard {
-  readonly letter: 'A' | 'B';
+  readonly id: string;
   readonly title: string;
   readonly subtitle: string;
-  readonly bullets: readonly string[];
-  readonly ctaText: string;
-  readonly ctaHref: string;
+  readonly description: string;
+  readonly idealFor: string;
+}
+
+// ============================================
+// Tipos de Proyectos
+// ============================================
+export type ProjectSize = 'normal' | 'tall' | 'wide';
+
+export interface Project {
+  readonly id: string;
+  readonly name: string;
+  readonly image: string;
+  readonly url: string;
+  readonly size: ProjectSize;
+}
+
+// ============================================
+// Tipos de Footer
+// ============================================
+export type SocialPlatform = 'linkedin' | 'github' | 'tiktok' | 'x';
+
+export interface SocialLink {
+  readonly platform: SocialPlatform;
+  readonly url: string;
 }
 
