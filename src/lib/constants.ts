@@ -291,7 +291,7 @@ export const FOOTER = {
   socials: [
     { platform: 'linkedin', url: 'https://www.linkedin.com/company/111126341/' },
     { platform: 'github', url: 'https://github.com/Allia-Studio' },
-    { platform: 'x', url: 'https://x.com/allia.studio' },
+    { platform: 'x', url: 'https://x.com/Allia_Studio' },
     { platform: 'tiktok', url: 'https://tiktok.com/@allia_studio' },
   ] satisfies readonly SocialLink[],
   contact: {
