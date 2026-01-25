@@ -287,12 +287,12 @@ export const FOOTER = {
     { label: 'MODELO.', href: '#modelo' },
     { label: 'PROYECTOS.', href: '#proyectos' },
   ] satisfies readonly NavLink[],
-  blogLink: { label: 'BLOG', href: '/blog' },
+  blogLink: { label: 'BLOG', href: 'https://blog.allia.dev/', isExternal: true },
   socials: [
     { platform: 'linkedin', url: 'https://www.linkedin.com/company/111126341/' },
     { platform: 'github', url: 'https://github.com/Allia-Studio' },
     { platform: 'x', url: 'https://x.com/allia.studio' },
-    { platform: 'tiktok', url: 'https://tiktok.com/@allia.studio' },
+    { platform: 'tiktok', url: 'https://tiktok.com/@allia_studio' },
   ] satisfies readonly SocialLink[],
   contact: {
     email: 'info@allia.dev',
