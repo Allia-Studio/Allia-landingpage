@@ -1,5 +1,5 @@
 ---
-import { NAV_LINKS } from '../../lib/constants';
+import { NAV_LINKS, ELEMENT_IDS } from '../../lib/constants';
 ---
 
 <nav
@@ -16,8 +16,8 @@ import { NAV_LINKS } from '../../lib/constants';
       <img src="/logo-dark.png" alt="Allia Studio" class="logo-dark h-5 w-auto" />
     </a>
 
-    <!-- Links de navegación -->
-    <div class="flex items-center gap-[var(--spacing-nav-gap)]">
+    <!-- Links de navegación (Desktop) -->
+    <div class="hidden md:flex items-center gap-[var(--spacing-nav-gap)]">
       {NAV_LINKS.map((link) => (
         <a
           href={link.href}
@@ -28,18 +28,55 @@ import { NAV_LINKS } from '../../lib/constants';
       ))}
     </div>
 
+    <!-- Hamburger Button (Mobile) -->
+    <button
+      id={ELEMENT_IDS.menuToggle}
+      class="md:hidden flex flex-col justify-center items-center w-10 h-10 relative z-10 focus-ring"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls={ELEMENT_IDS.mobileMenu}
+    >
+      <span class="hamburger-line hamburger-line-1"></span>
+      <span class="hamburger-line hamburger-line-2"></span>
+      <span class="hamburger-line hamburger-line-3"></span>
+    </button>
+
   </div>
 </nav>
 
+<!-- Mobile Menu Panel -->
+<div
+  id={ELEMENT_IDS.mobileMenu}
+  class="mobile-menu fixed inset-0 z-[calc(var(--z-navbar)-1)] md:hidden"
+  aria-hidden="true"
+>
+  <!-- Backdrop -->
+  <div class="mobile-menu-backdrop absolute inset-0 bg-(--color-black)/90"></div>
+  
+  <!-- Menu Content -->
+  <div class="mobile-menu-content relative h-full flex flex-col justify-center items-center gap-8 px-[var(--spacing-container)]">
+    {NAV_LINKS.map((link, index) => (
+      <a
+        href={link.href}
+        class="mobile-nav-link font-display text-3xl md:text-4xl text-(--color-white) uppercase tracking-wide hover:text-(--color-accent) transition-colors"
+        style={`--delay: ${index * 50}ms`}
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+</div>
+
 <style>
-  /* Transición unificada solo en navbar-inner */
+  /* ===========================================
+     Navbar Base & Scrolled States
+     =========================================== */
   .navbar-inner {
     padding: 12px 16px;
     background-color: transparent;
     transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Transición de color en links */
   .nav-link {
     transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -54,7 +91,6 @@ import { NAV_LINKS } from '../../lib/constants';
     background-color: var(--color-white);
   }
 
-  /* Cambio de color del texto al hacer scroll */
   #navbar.scrolled .nav-link {
     color: var(--color-bg);
   }
@@ -63,7 +99,9 @@ import { NAV_LINKS } from '../../lib/constants';
     background-color: var(--color-bg);
   }
 
-  /* Intercambio de logo - estado por defecto (logo blanco visible) */
+  /* ===========================================
+     Logo Swap
+     =========================================== */
   .logo-white {
     display: block;
   }
@@ -72,7 +110,6 @@ import { NAV_LINKS } from '../../lib/constants';
     display: none;
   }
 
-  /* Intercambio de logo al hacer scroll (logo oscuro visible) */
   #navbar.scrolled .logo-white {
     display: none;
   }
@@ -80,37 +117,227 @@ import { NAV_LINKS } from '../../lib/constants';
   #navbar.scrolled .logo-dark {
     display: block;
   }
+
+  /* ===========================================
+     Hamburger Button
+     =========================================== */
+  .hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: transform 0.3s var(--ease-out-expo),
+                opacity 0.3s var(--ease-out-expo),
+                background-color 0.4s var(--ease-out-expo);
+  }
+
+  .hamburger-line-1 {
+    transform: translateY(-6px);
+  }
+
+  .hamburger-line-2 {
+    transform: translateY(0);
+  }
+
+  .hamburger-line-3 {
+    transform: translateY(6px);
+  }
+
+  /* Hamburger color on scrolled */
+  #navbar.scrolled .hamburger-line {
+    background-color: var(--color-bg);
+  }
+
+  /* Hamburger X state when menu open */
+  #navbar.menu-open .hamburger-line {
+    background-color: var(--color-white);
+  }
+
+  #navbar.menu-open .hamburger-line-1 {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  #navbar.menu-open .hamburger-line-2 {
+    opacity: 0;
+  }
+
+  #navbar.menu-open .hamburger-line-3 {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  /* ===========================================
+     Mobile Menu
+     =========================================== */
+  .mobile-menu {
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .mobile-menu-backdrop {
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-out-expo);
+  }
+
+  .mobile-menu-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s var(--ease-out-expo),
+                transform 0.4s var(--ease-out-expo);
+  }
+
+  .mobile-nav-link {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s var(--ease-out-expo),
+                transform 0.4s var(--ease-out-expo),
+                color 0.25s ease;
+    transition-delay: var(--delay, 0ms);
+  }
+
+  /* Menu Open State */
+  .mobile-menu.open {
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .mobile-menu.open .mobile-menu-backdrop {
+    opacity: 1;
+  }
+
+  .mobile-menu.open .mobile-menu-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-menu.open .mobile-nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===========================================
+     Focus States
+     =========================================== */
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
 </style>
 
 <script>
   const navbar = document.getElementById('navbar');
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileNavLinks = mobileMenu?.querySelectorAll('.mobile-nav-link');
   const SCROLL_THRESHOLD = 80;
 
-  if (navbar) {
+  let isMenuOpen = false;
+
+  /**
+   * Toggle mobile menu open/close state
+   */
+  function toggleMenu(): void {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  }
+
+  /**
+   * Open mobile menu
+   */
+  function openMenu(): void {
+    isMenuOpen = true;
+    navbar?.classList.add('menu-open');
+    mobileMenu?.classList.add('open');
+    mobileMenu?.setAttribute('aria-hidden', 'false');
+    menuToggle?.setAttribute('aria-expanded', 'true');
+    menuToggle?.setAttribute('aria-label', 'Cerrar menú de navegación');
+    document.body.style.overflow = 'hidden';
+    
+    // Focus first link
+    const firstLink = mobileNavLinks?.[0] as HTMLElement;
+    setTimeout(() => firstLink?.focus(), 100);
+  }
+
+  /**
+   * Close mobile menu
+   */
+  function closeMenu(): void {
+    isMenuOpen = false;
+    navbar?.classList.remove('menu-open');
+    mobileMenu?.classList.remove('open');
+    mobileMenu?.setAttribute('aria-hidden', 'true');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Abrir menú de navegación');
+    document.body.style.overflow = '';
+  }
+
+  /**
+   * Handle scroll for navbar background
+   */
+  function handleScroll(): void {
+    const scrollY = window.scrollY;
+    if (scrollY > SCROLL_THRESHOLD) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  }
+
+  /**
+   * Handle keyboard events
+   */
+  function handleKeydown(event: KeyboardEvent): void {
+    if (event.key === 'Escape' && isMenuOpen) {
+      closeMenu();
+      menuToggle?.focus();
+    }
+  }
+
+  // Event Listeners
+  if (navbar && menuToggle && mobileMenu) {
     const controller = new AbortController();
     const { signal } = controller;
 
+    // Hamburger click
+    menuToggle.addEventListener('click', toggleMenu, { signal });
+
+    // Close on nav link click
+    mobileNavLinks?.forEach(link => {
+      link.addEventListener('click', closeMenu, { signal });
+    });
+
+    // Close on backdrop click
+    mobileMenu.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).classList.contains('mobile-menu-backdrop')) {
+        closeMenu();
+      }
+    }, { signal });
+
+    // Escape key
+    document.addEventListener('keydown', handleKeydown, { signal });
+
+    // Scroll handling with rAF
     let ticking = false;
-    const handleScroll = (): void => {
+    window.addEventListener('scroll', () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
-          if (scrollY > SCROLL_THRESHOLD) {
-            navbar.classList.add('scrolled');
-          } else {
-            navbar.classList.remove('scrolled');
-          }
+          handleScroll();
           ticking = false;
         });
         ticking = true;
       }
-    };
+    }, { signal, passive: true });
 
-    window.addEventListener('scroll', handleScroll, { signal, passive: true });
+    // Initial scroll check
     handleScroll();
 
-    // Limpieza en View Transitions
+    // Cleanup on View Transitions
     document.addEventListener('astro:before-swap', () => {
+      closeMenu();
       controller.abort();
     }, { once: true });
   }

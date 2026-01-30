@@ -8,14 +8,14 @@ import Button from '../ui/Button.astro';
 import { FOOTER, CALCOM } from '../../lib/constants';
 ---
 
-<footer class="bg-(--color-black) pt-24 pb-10">
+<footer class="bg-(--color-black) pt-16 md:pt-24 pb-10 px-[var(--spacing-container)]">
   <Container>
-    <!-- Main Content Grid: 4 columnas -->
-    <div class="grid grid-cols-4 gap-16 mb-20">
+    <!-- Main Content Grid: Responsive -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16 mb-16 md:mb-20">
 
       <!-- Columna 1-2: Frase + CTA Button -->
-      <div class="col-span-2">
-        <h2 class="font-title text-5xl lg:text-7xl text-(--color-white) leading-[1.1] mb-10">
+      <div class="md:col-span-2">
+        <h2 class="font-title text-4xl md:text-5xl lg:text-7xl text-(--color-white) leading-[1.1] mb-8 md:mb-10">
           {FOOTER.phrase[0]}<br />{FOOTER.phrase[1]}
         </h2>
         <Button
@@ -76,11 +76,11 @@ import { FOOTER, CALCOM } from '../../lib/constants';
     </div>
 
     <!-- Copyright Bar -->
-    <div class="border-t border-(--color-white)/10 pt-8 flex justify-between items-center">
+    <div class="border-t border-(--color-white)/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
       <span class="text-sm text-(--color-gray-dark)">
         {FOOTER.copyright}
       </span>
-      <div class="flex gap-8">
+      <div class="flex gap-6 md:gap-8">
         {FOOTER.legalLinks.map((link) => (
           <a
             href={link.href}
