@@ -122,7 +122,7 @@ import { NAV_LINKS, ELEMENT_IDS } from '../../lib/constants';
      Hamburger Button
      =========================================== */
   .hamburger-line {
-    display: block;
+    position: absolute;
     width: 24px;
     height: 2px;
     background-color: var(--color-white);
@@ -148,9 +148,14 @@ import { NAV_LINKS, ELEMENT_IDS } from '../../lib/constants';
     background-color: var(--color-bg);
   }
 
-  /* Hamburger X state when menu open */
+  /* Hamburger X state when menu open (on dark navbar) */
   #navbar.menu-open .hamburger-line {
     background-color: var(--color-white);
+  }
+
+  /* Hamburger X state when menu open AND navbar is scrolled (white bg) */
+  #navbar.scrolled.menu-open .hamburger-line {
+    background-color: var(--color-bg);
   }
 
   #navbar.menu-open .hamburger-line-1 {

@@ -2,6 +2,7 @@
 /**
  * TeamCard.astro - Tarjeta de miembro del equipo
  * Foto en escala de grises, al hover muestra color + info overlay
+ * Touch devices: tap-to-reveal behavior (via shared script)
  */
 import type { TeamMember } from '../../lib/types';
 
@@ -10,20 +11,20 @@ interface Props extends TeamMember {}
 const { name, role, linkedin, photo } = Astro.props;
 ---
 
-<article class="team-card group relative aspect-[3/4] overflow-hidden rounded-lg cursor-pointer">
+<article class="team-card group relative aspect-[3/4] overflow-hidden rounded-lg cursor-pointer" data-card-reveal>
   <!-- Imagen con filtro grayscale -->
   <img
     src={photo}
     alt={`Foto de ${name}`}
-    class="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0"
+    class="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-[.active]:grayscale-0"
     loading="lazy"
   />
 
-  <!-- Overlay con gradiente (siempre visible pero más intenso en hover) -->
-  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+  <!-- Overlay con gradiente -->
+  <div class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition-opacity duration-500" />
 
-  <!-- Info container (aparece desde abajo en hover) -->
-  <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+  <!-- Info container (aparece desde abajo) -->
+  <div class="card-info absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 group-[.active]:translate-y-0 transition-transform duration-500 ease-out">
     <div class="flex items-end justify-between">
       <div>
         <h4 class="font-title text-xl md:text-2xl text-(--color-white) mb-1">
@@ -37,7 +38,7 @@ const { name, role, linkedin, photo } = Astro.props;
         href={linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-(--color-white)/10 text-(--color-white) hover:bg-(--color-accent) hover:text-(--color-white) transition-colors"
+        class="card-action flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-(--color-white)/10 text-(--color-white) hover:bg-(--color-accent) hover:text-(--color-white) transition-colors"
         aria-label={`LinkedIn de ${name}`}
       >
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

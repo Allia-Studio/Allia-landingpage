@@ -253,24 +253,17 @@ export const PROYECTOS_SECTION = {
 
 export const PROJECTS: readonly Project[] = [
   {
-    id: 'aethon',
-    name: 'Aethon',
-    image: '/images/projects/aethon.webp',
-    url: 'https://aethon.io',
-    size: 'wide',
-  },
-  {
-    id: 'pulse',
-    name: 'Pulse',
-    image: '/images/projects/pulse.webp',
-    url: 'https://pulse.health',
+    id: 'vantage-ai',
+    name: 'Vantage AI',
+    description: 'Extensión de navegador con IA que te asiste en reuniones en tiempo real: sugiere preguntas, analiza requerimientos y actúa como un miembro más de tu equipo.',
+    image: '/images/projects/Vantage-AI.png',
     size: 'normal',
   },
   {
-    id: 'flowai',
-    name: 'FlowAI',
-    image: '/images/projects/flowai.webp',
-    url: 'https://flowai.io',
+    id: 'tomi',
+    name: 'Tomi',
+    description: 'Soporte al cliente inteligente con RAG que resuelve tickets, escala a humanos cuando es necesario y se autoalimenta con cada conversación resuelta.',
+    image: '/images/projects/Tomi.png',
     size: 'normal',
   },
 ] as const;

@@ -107,8 +107,9 @@ export type ProjectSize = 'normal' | 'tall' | 'wide';
 export interface Project {
   readonly id: string;
   readonly name: string;
+  readonly description: string;
   readonly image: string;
-  readonly url: string;
+  readonly url?: string;
   readonly size: ProjectSize;
 }
 

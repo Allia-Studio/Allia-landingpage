@@ -26,8 +26,8 @@ import { PROYECTOS_SECTION, PROJECTS } from '../../lib/constants';
       </p>
     </header>
 
-    <!-- Grid Bento: 3 columnas (2fr + 1fr + 1fr) -->
-    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-6 md:gap-8">
+    <!-- Grid: 2 columnas iguales -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       {PROJECTS.map((project) => (
         <ProjectCard {...project} />
       ))}
