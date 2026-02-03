@@ -288,7 +288,7 @@ export const FOOTER = {
     { platform: 'tiktok', url: 'https://tiktok.com/@allia_studio' },
   ] satisfies readonly SocialLink[],
   contact: {
-    email: 'info@allia.dev',
+    email: 'build@allia.dev',
   },
   copyright: '© 2026 Allia Studio',
   legalLinks: [
