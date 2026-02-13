@@ -285,7 +285,7 @@ export const FOOTER = {
     { platform: 'linkedin', url: 'https://www.linkedin.com/company/111126341/' },
     { platform: 'github', url: 'https://github.com/Allia-Studio' },
     { platform: 'x', url: 'https://x.com/Allia_Studio' },
-    { platform: 'tiktok', url: 'https://tiktok.com/@allia_studio' },
+    { platform: 'tiktok', url: 'https://www.tiktok.com/@allia.studio.pe' },
   ] satisfies readonly SocialLink[],
   contact: {
     email: 'build@allia.dev',
