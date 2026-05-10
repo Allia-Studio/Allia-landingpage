@@ -253,10 +253,11 @@ export const PROYECTOS_SECTION = {
 
 export const PROJECTS: readonly Project[] = [
   {
-    id: 'vantage-ai',
-    name: 'Vantage AI',
+    id: 'dopplerme',
+    name: 'DopplerMe',
     description: 'Extensión de navegador con IA que te asiste en reuniones en tiempo real: sugiere preguntas, analiza requerimientos y actúa como un miembro más de tu equipo.',
-    image: '/images/projects/Vantage-AI.png',
+    image: '/images/projects/DopplerMe.png',
+    url: 'https://chromewebstore.google.com/detail/dopplerme/mnladjocpejfkhkncbonpdbicbcdmmaj',
     size: 'normal',
   },
   {
